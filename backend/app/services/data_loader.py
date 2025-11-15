@@ -17,7 +17,7 @@ def load_supplier_data():
         avg_price = df["close"].mean()
 
         df["return"] = df["close"].pct_change()
-        volatility_30d = df["return"].rolling(window=30).std().iloc(-1)
+        volatility_30d = df["return"].rolling(window=30).std().iloc[-1]
 
         supplier_data[company] = {
             "avg_price": float(avg_price),
