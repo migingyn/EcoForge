@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-DATA_PATH = "../data"
+DATA_PATH = "app/data"
 
 SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X"]
 
@@ -21,5 +21,3 @@ def load_supplier_data():
         }
     
     print(supplier_data)
-
-load_supplier_data()

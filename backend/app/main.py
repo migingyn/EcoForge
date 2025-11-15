@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.services.data_loader import load_supplier_data, supplier_data
 from contextlib import asynccontextmanager
+
+from app.services.data_loader import load_supplier_data, supplier_data
+from app.services.scoring import calculate_cost_scores
 
 # Load data on startup
 @asynccontextmanager
@@ -30,8 +32,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-
 # Basic Routes
 @app.get("/")
 def root():
@@ -40,3 +40,11 @@ def root():
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+@app.get("/suppliers")
+def get_suppliers():
+    return supplier_data
+
+@app.get("/cost_scores")
+def get_cost_scores():
+    return calculate_cost_scores()
