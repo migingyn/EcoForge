@@ -4,6 +4,11 @@ from typing import List, Dict
 from app.services.data_loader import supplier_data, supplier_metadata
 
 SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X"]
+EMISSIONS = {
+    "truck": 73.92, # Unit of Measurement: 73.92g CO₂e/tonne-km 
+    "rail/train": 11.94, # Unit of Measurement: 11.94g CO₂e/tonne-km
+    "ship": 3.94 # Unit of Measurement: 3.94g CO₂e/tonne-km
+}
 
 # Min gets set to 0, Max gets set to 1
 def normalizer(values: List[float]) -> List[float]:
@@ -73,15 +78,17 @@ def haversine(lat1: float, lon1: float, lat2:  float, lon2: float) -> float:
 
     return R * c
 
-def calculate_logistics_score(destination_lat, destination_lon):
-    distances = []
+def calculate_logistics_score(destination_lat, destination_lon, tonnage: float, mode: str):
+    emissions = []
 
     for company in SUPPLIERS:
         origin_lat = supplier_metadata[company]["lat"]
         origin_lon = supplier_metadata[company]["lon"]
-        distances.append(haversine(destination_lat, destination_lon, origin_lat, origin_lon))
+        distance = haversine(destination_lat, destination_lon, origin_lat, origin_lon)
+        emission = distance * tonnage * EMISSIONS[mode]
+        emissions.append(emission)
     
-    logistics_scores = inverse_normalizer(distances)
+    logistics_scores = inverse_normalizer(emissions)
 
     results = {}
     for company, score in zip(SUPPLIERS, logistics_scores):
@@ -124,11 +131,6 @@ def calculate_final_scores(destination_lat, destination_lon, weights):
     results.sort(key=lambda r: r["final_score"], reverse=True)
 
     return results
-EMISSIONS = {
-    "truck": 73.92, # Unit of Measurement: 73.92g CO₂e/tonne-km 
-    "rail/train": 11.94, # Unit of Measurement: 11.94g CO₂e/tonne-km
-    "ship": 3.94 # Unit of Measurement: 3.94g CO₂e/tonne-km
-}
 
 def calculate_transport_emissions(distance: float, tonnage: float, mode: str):
     emission_factor = EMISSIONS[mode]
