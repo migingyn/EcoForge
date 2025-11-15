@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
 from app.services.data_loader import load_supplier_data, supplier_data
-from app.services.scoring import calculate_cost_scores
+from app.services.scoring import calculate_cost_scores, calculate_risk_scores
 
 # Load data on startup
 @asynccontextmanager
@@ -48,3 +48,7 @@ def get_suppliers():
 @app.get("/cost_scores")
 def get_cost_scores():
     return calculate_cost_scores()
+
+@app.get("/risk-scores")
+def get_risk_scores():
+    return calculate_risk_scores()

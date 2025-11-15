@@ -21,6 +21,7 @@ def inverse_normalizer(values: List[float]) -> List[float]:
     
     return [(max_val - val) / (max_val - min_val) for val in values]
     
+# Calculates score based on cost
 def calculate_cost_scores() -> Dict[str, float]:
     companies = list(supplier_data.keys())
     closing_prices = [supplier_data[company]["avg_price"] for company in companies]
@@ -32,4 +33,16 @@ def calculate_cost_scores() -> Dict[str, float]:
     for company, score in zip(companies, cost_scores):
         results[company] = score
     
+    return results
+
+def calculate_risk_scores() -> Dict[str, float]:
+    companies = list(supplier_data.keys())
+    volatilities = [supplier_data[company]["volatility"] for company in companies]
+
+    risk_scores = inverse_normalizer(volatilities)
+
+    results = {}
+    for company, score in zip(companies, risk_scores):
+        results[company] = score
+
     return results
