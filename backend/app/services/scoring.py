@@ -1,5 +1,7 @@
-from app.services.data_loader import supplier_data, supplier_metadata
+from math import radians, sin, cos, asin, sqrt
 from typing import List, Dict
+
+from app.services.data_loader import supplier_data, supplier_metadata
 
 SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X"]
 
@@ -55,5 +57,70 @@ def calculate_co2_scores() -> Dict[str, float]:
     results = {}
     for company, score in zip(SUPPLIERS, co2_scores):
         results[company] = score
+
+    return results
+
+# Distance formula for GPS coordinates
+def haversine(lat1: float, lon1: float, lat2:  float, lon2: float) -> float:
+    R = 6371.0
+
+    phi1, phi2 = radians(lat1), radians(lat2)
+    dphi = radians(lat2 - lat1)
+    dlambda = radians(lon2 - lon1)
+
+    a = sin(dphi / 2.0) ** 2 + cos(phi1) * cos(phi2) * sin(dlambda / 2.0) ** 2
+    c = 2 * asin(sqrt(a))
+
+    return R * c
+
+def calculate_logistics_score(destination_lat, destination_lon):
+    distances = []
+
+    for company in SUPPLIERS:
+        origin_lat = supplier_metadata[company]["lat"]
+        origin_lon = supplier_metadata[company]["lon"]
+        distances.append(haversine(destination_lat, destination_lon, origin_lat, origin_lon))
+    
+    logistics_scores = inverse_normalizer(distances)
+
+    results = {}
+    for company, score in zip(SUPPLIERS, logistics_scores):
+        results[company] = score
+    
+    return results
+
+def calculate_final_scores(destination_lat, destination_lon, weights):
+    cost_scores = calculate_cost_scores()
+    risk_scores = calculate_risk_scores()
+    co2_scores = calculate_co2_scores()
+    logistics_scores = calculate_logistics_score(destination_lat, destination_lon)
+    results = []
+
+    for company in SUPPLIERS:
+        cost = cost_scores[company]
+        risk = risk_scores[company]
+        co2 = co2_scores[company]
+        logistics = logistics_scores[company]
+
+        final_score = (
+            cost * weights["cost"] +
+            risk * weights["risk"] + 
+            co2 * weights["co2"] + 
+            logistics * weights["logistics"]
+        )
+
+        results.append({
+            "company": company,
+            "final_score": final_score,
+            "scores": {
+                "cost": cost,
+                "risk": risk,
+                "co2": co2,
+                "logistics": logistics,
+            },
+            "weights": weights
+        })
+
+    results.sort(key=lambda r: r["final_score"], reverse=True)
 
     return results
