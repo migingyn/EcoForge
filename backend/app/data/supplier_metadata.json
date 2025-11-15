@@ -1,403 +1,403 @@
 {
-  "ClevelandCliffs": {
-    "Indiana Harbor": {
-      "PlantName": "Indiana Harbor Works",
-      "Location": {
-        "City": "East Chicago",
-        "State": "Indiana",
-        "Country": "USA",
-        "Latitude": 41.669553,
-        "Longitude": -87.438429,
-        "GoogleMaps": "https://maps.google.com/?q=41.669553,-87.438429"
-      },
-      "YearCommissioned": "1901:contentReference[oaicite:0]{index=0}",
-      "Modernization": "Blast Furnace #7 (4,163 m³) added 1980; hydrogen injection pipeline (2024):contentReference[oaicite:1]{index=1}",
-      "SteelmakingProcess": {
-        "PrimaryRoute": "Blast Furnace – Basic Oxygen Furnace (EAF idled):contentReference[oaicite:2]{index=2}",
-        "CokeOvens": "Yes (integrated BF plant)",
-        "SinterPlants": "Yes (integrated BF plant)",
-        "Pelletizers": "No (uses own pellet plants off-site)",
-        "ScrapShare": "EAF feedstock ~75% scrap:contentReference[oaicite:3]{index=3}",
-        "DRIShare": "0%",
-        "HotMetalShare": "100%",
-        "EAF_MVA": null,
-        "BF_Capacity": "4200 kt/year:contentReference[oaicite:4]{index=4}",
-        "FurnaceSize": "BF7: 4,163 m³ (capacity ~4.2 Mt/yr):contentReference[oaicite:5]{index=5}; BOF: 250 t (x2), 185 t (x2):contentReference[oaicite:6]{index=6}",
-        "RollingMill": "80\" hot-strip mill, pickling, 5-stand tandem cold mill, temper mill, hot-dip galvanizing line"
-      },
-      "CarbonIntensity": {
-        "CO2_per_ton": 1.54,
-        "Scope1": "N/A",
-        "Scope2": "N/A",
-        "Scope3": "N/A"
-      },
-      "ProductionCapacity": {
-        "AnnualCrudeSteel_Mt": 6.8,
-        "RollingCapacity": "Hot strip and cold rolling (~ multi-million t/yr)",
-        "UtilizationRate": "N/A",
-        "FeedstockSources": "Iron ore pellets (own mines), HBI (Toledo), metallurgical coal (coke ovens), scrap (FPT)"
-      },
-      "Logistics": {
-        "OutboundModes": ["Rail", "Barge"],
-        "OnsiteRail": "Yes",
-        "Highways": "Near I-90 (Indiana Toll Road)",
-        "WaterAccess": "Lake Michigan via Indiana Harbor Ship Canal",
-        "NearestPort": "Port of Indiana (Burns Harbor)",
-        "ShippingRadius": "Midwest/Great Lakes region",
-        "LogisticsPartners": ["CSX", "Norfolk Southern", "CN"]
-      },
-      "EnergyMix_Sustainability": {
-        "Electricity": "Regional grid (PJM/MISO), some renewable PPAs",
-        "GreenSteelInvestments": "Hydrogen-ready BF pipeline:contentReference[oaicite:7]{index=7}",
-        "CarbonCapture": "No CCS deployed (pilot H2 injection)",
-        "EmissionsTargets": "Reduce Scope1+2 intensity 30% by 2035; net-zero by 2050:contentReference[oaicite:8]{index=8}",
-        "EPA_Violations": "OSHA safety fines (2020):contentReference[oaicite:9]{index=9}; no major EPA air violations found"
-      },
-      "RiskFactors": {
-        "Market": "Automotive demand sensitivity, commodity price swings",
-        "Operational": "Blast furnace outages, aging equipment",
-        "Labor": "Unionized workforce (United Steelworkers)",
-        "Geographic": "Harsh winters (Lake transport), water availability"
-      },
-      "ModelInputs": {
-        "CO2Intensity": null,
-        "LogisticsMode": "Rail",
-        "RedFlags": "High BF reliance; large CO2 emitter"
-      }
-    }
-  },
-  "USSteel": {
-    "Gary Works": {
-      "PlantName": "Gary Works",
-      "Location": {
-        "City": "Gary",
-        "State": "Indiana",
-        "Country": "USA",
-        "Latitude": 41.620799,
-        "Longitude": -87.348266,
-        "GoogleMaps": "https://maps.google.com/?q=41.620799,-87.348266"
-      },
-      "YearCommissioned": "1908:contentReference[oaicite:10]{index=10}",
-      "Modernization": "Major $750M upgrade (2018):contentReference[oaicite:11]{index=11}; pig iron expansion (2023):contentReference[oaicite:12]{index=12}; carbon capture project (SkyCycle™) on BFs:contentReference[oaicite:13]{index=13}",
-      "SteelmakingProcess": {
-        "PrimaryRoute": "Blast Furnace – Basic Oxygen Furnace:contentReference[oaicite:14]{index=14}",
-        "CokeOvens": "Yes",
-        "SinterPlants": "Yes",
-        "Pelletizers": "No (uses external pellets)",
-        "ScrapShare": "Minimal (BF-driven); some scrap in BOFs",
-        "DRIShare": "0%",
-        "HotMetalShare": "100%",
-        "EAF_MVA": null,
-        "BF_Capacity": "BF14: 2540 kt/yr; BF4: 1360 kt; BF6: 1234 kt; BF8: 1361 kt:contentReference[oaicite:15]{index=15}",
-        "FurnaceSize": "BF14: 2,540 ktpy (new BF, 1974); smaller older BFs 1.2–1.4 Mtpy:contentReference[oaicite:16]{index=16}; BOF: 1300 kt (×6):contentReference[oaicite:17]{index=17}",
-        "RollingMill": "Hot strip, plate mills; pig iron and metalcasting operations (tinplate idled 2019)"
-      },
-      "CarbonIntensity": {
-        "CO2_per_ton": 1.81,
-        "Scope1": 1.64,
-        "Scope2": 0.18,
-        "Scope3": "N/A"
-      },
-      "ProductionCapacity": {
-        "AnnualCrudeSteel_Mt": 7.8,
-        "RollingCapacity": "Hot/coated coils, plate (multi-million t/yr)",
-        "UtilizationRate": "N/A",
-        "FeedstockSources": "Purchased ore/pellets; coking coal from Appalachia; scrap (Schaeffler scrap stream)"
-      },
-      "Logistics": {
-        "OutboundModes": ["Rail", "Lake Ship"],
-        "OnsiteRail": "Yes",
-        "Highways": "I-90 nearby",
-        "WaterAccess": "Calumet River to Lake Michigan",
-        "NearestPort": "Port of Indiana-Gary",
-        "ShippingRadius": "Nationwide via rail/Lake",
-        "LogisticsPartners": ["CN", "NS", "BNSF", "CSX"]
-      },
-      "EnergyMix_Sustainability": {
-        "Electricity": "Grid (MISO/PJM)",
-        "GreenSteelInvestments": "Carbon capture pilot at BFs:contentReference[oaicite:18]{index=18}",
-        "CarbonCapture": "SkyCycleTM (50 kT CO2/yr):contentReference[oaicite:19]{index=19}",
-        "EmissionsTargets": "US Steel (X) target unspecified in sources",
-        "EPA_Violations": "1980s Superfund cleanup (PCBs); 2016 federal fines ($2.2M) for Midwest plants"
-      },
-      "RiskFactors": {
-        "Market": "Steel price volatility, tariffs",
-        "Operational": "Aging blast furnaces, maintenance shutdowns",
-        "Labor": "US Steel unions (USW)",
-        "Geographic": "Lake shipping freeze risk, regional pollution constraints"
-      },
-      "ModelInputs": {
-        "CO2Intensity": null,
-        "LogisticsMode": "Rail",
-        "RedFlags": "Very high emissions; multibillion $ modernization needed"
-      }
-    }
-  },
-  "SteelDynamics": {
-    "Butler Works": {
-      "PlantName": "Butler Works",
-      "Location": {
-        "City": "Butler",
-        "State": "Indiana",
-        "Country": "USA",
-        "Latitude": 41.301,
-        "Longitude": -85.352,
-        "GoogleMaps": "https://maps.google.com/?q=41.3010,-85.3520"
-      },
-      "YearCommissioned": "1996:contentReference[oaicite:21]{index=21}",
-      "Modernization": "Expanded multiple times; installed modern EAFs (one 108 MW):contentReference[oaicite:22]{index=22}",
-      "SteelmakingProcess": {
-        "PrimaryRoute": "Electric Arc Furnace (mini-mill):contentReference[oaicite:23]{index=23}",
-        "CokeOvens": "No",
-        "SinterPlants": "No",
-        "Pelletizers": "No",
-        "ScrapShare": "High (all EAF feed)",
-        "DRIShare": "0%",
-        "HotMetalShare": "0%",
-        "EAF_MVA": "108 MVA (typical large EAF)",
-        "BF_Capacity": null,
-        "FurnaceSize": "EAF ~100–110 MVA each",
-        "RollingMill": "Hot strip, cold roll, galvanizing lines (flat products)"
-      },
-      "CarbonIntensity": {
-        "CO2_per_ton": 0.391,
-        "Scope1": 0.197,
-        "Scope2": 0.194,
-        "Scope3": 0.387
-      },
-      "ProductionCapacity": {
-        "AnnualCrudeSteel_Mt": 3.2,
-        "RollingCapacity": "Flat-rolled (multi-million t/yr)",
-        "UtilizationRate": "N/A",
-        "FeedstockSources": "Scrap (own and merchant), pig iron (2009–16 concession from ARCELORMITTAL ACU)"
-      },
-      "Logistics": {
-        "OutboundModes": ["Rail", "Truck"],
-        "OnsiteRail": "Yes",
-        "Highways": "Near US-20, I-69",
-        "WaterAccess": "None (inland)",
-        "NearestPort": "Port of Indiana (Burns Harbor) ~60 mi",
-        "ShippingRadius": "Midwest, national",
-        "LogisticsPartners": ["NS", "CN", "CSX"]
-      },
-      "EnergyMix_Sustainability": {
-        "Electricity": "Regional grid (MISO)",
-        "GreenSteelInvestments": "18 MW wind PPA, carbon capture studies (via DOE)",
-        "CarbonCapture": "Pilot study only",
-        "EmissionsTargets": "20% GHG reduction (Scope1+2) by 2025:contentReference[oaicite:24]{index=24}",
-        "EPA_Violations": "2017 Clean Air Act settlement ($3M) at Butler plant:contentReference[oaicite:25]{index=25}"
-      },
-      "RiskFactors": {
-        "Market": "Steel cycle; competition from imports",
-        "Operational": "Dependence on scrap market",
-        "Labor": "Union (USW)",
-        "Geographic": "Flooding (IN rivers), Midwest logistics"
-      },
-      "ModelInputs": {
-        "CO2Intensity": 0.6,
-        "LogisticsMode": "Truck",
-        "RedFlags": "Market cyclicality; lower emissions risk"
-      }
-    }
-  },
-  "CommercialMetals": {
-    "CentreTexasMill": {
-      "PlantName": "Centre Texas Recycling/Steel Mill",
-      "Location": {
-        "City": "Texas City",
-        "State": "Texas",
-        "Country": "USA",
-        "Latitude": 29.3869,
-        "Longitude": -94.9147,
-        "GoogleMaps": "https://maps.google.com/?q=29.3869,-94.9147"
-      },
-      "YearCommissioned": "N/A",
-      "Modernization": "The Texas City steel mill opened in 2005 (EAF-based)",
-      "SteelmakingProcess": {
-        "PrimaryRoute": "Electric Arc Furnace (mini-mill)",
-        "CokeOvens": "No",
-        "SinterPlants": "No",
-        "Pelletizers": "No",
-        "ScrapShare": "High (all steel from scrap)",
-        "DRIShare": "0%",
-        "HotMetalShare": "0%",
-        "EAF_MVA": "200 MVA",
-        "BF_Capacity": null,
-        "FurnaceSize": "Large EAF (~100–200 MVA)",
-        "RollingMill": "Rebar and wire rod mills"
-      },
-      "CarbonIntensity": {
-        "CO2_per_ton": 0.42,
-        "Scope1": 0.2,
-        "Scope2": 0.23,
-        "Scope3": 0.3
-      },
-      "ProductionCapacity": {
-        "AnnualCrudeSteel_Mt": 1.6,
-        "RollingCapacity": "Rebar: 1.2 Mt; Wire rod: 0.2 Mt",
-        "UtilizationRate": "N/A",
-        "FeedstockSources": "Electricity and scrap (100% of iron source)"
-      },
-      "Logistics": {
-        "OutboundModes": ["Truck", "Barge"],
-        "OnsiteRail": "Yes",
-        "Highways": "I-45, I-10",
-        "WaterAccess": "Galveston Bay (barge)",
-        "NearestPort": "Port Houston (25 mi)",
-        "ShippingRadius": "Gulf Coast region",
-        "LogisticsPartners": ["UP", "BNSF", "CN"]
-      },
-      "EnergyMix_Sustainability": {
-        "Electricity": "ERCOT grid; some wind PPAs",
-        "GreenSteelInvestments": "Scrap recycling programs",
-        "CarbonCapture": "None",
-        "EmissionsTargets": "30% reduction by 2030 (company-wide):contentReference[oaicite:26]{index=26}",
-        "EPA_Violations": "N/A"
-      },
-      "RiskFactors": {
-        "Market": "Construction cycle (rebar demand)",
-        "Operational": "Dependence on scrap supply",
-        "Labor": "Non-union (TX right-to-work)",
-        "Geographic": "Hurricane/sea-level risk"
-      },
-      "ModelInputs": {
-        "CO2Intensity": 0.5,
-        "LogisticsMode": "Barge",
-        "RedFlags": "Coastal storm risk"
-      }
-    }
-  },
-  "ArcelorMittal": {
-    "Dofasco": {
-      "PlantName": "Dofasco Inc. (ArcelorMittal Canada) – Hamilton Works",
-      "Location": {
-        "City": "Hamilton",
-        "State": "Ontario",
-        "Country": "Canada",
-        "Latitude": 43.251,
-        "Longitude": -79.87,
-        "GoogleMaps": "https://maps.google.com/?q=43.2510,-79.8700"
-      },
-      "YearCommissioned": "1912",
-      "Modernization": "Modern EAFs (six 100 MW); new galvanizing line (2023)",
-      "SteelmakingProcess": {
-        "PrimaryRoute": "Electric Arc Furnace (all steel from scrap)",
-        "CokeOvens": "No",
-        "SinterPlants": "No",
-        "Pelletizers": "No",
-        "ScrapShare": "100% (no BF)",
-        "DRIShare": "0%",
-        "HotMetalShare": "0%",
-        "EAF_MVA": "Six 100-MVA furnaces",
-        "FurnaceSize": "EAFs ~450 t each",
-        "RollingMill": "Hot/Cold rolled, coating, plate mills"
-      },
-      "CarbonIntensity": {
-        "CO2_per_ton": 1.75,
-        "Scope1": "N/A",
-        "Scope2": "N/A",
-        "Scope3": "N/A"
-      },
-      "ProductionCapacity": {
-        "AnnualCrudeSteel_Mt": 3.4,
-        "RollingCapacity": "Hot/cold coil, plate",
-        "UtilizationRate": "90%",
-        "FeedstockSources": "Domestic scrap; grid electricity (Ontario mix ~60% nuclear)"
-      },
-      "Logistics": {
-        "OutboundModes": ["Truck", "Rail", "Ship"],
-        "OnsiteRail": "Yes",
-        "Highways": "QEW nearby",
-        "WaterAccess": "Lake Ontario via Burlington Shipping Canal",
-        "NearestPort": "Port of Hamilton",
-        "ShippingRadius": "Canada/NE USA",
-        "LogisticsPartners": ["CN", "CP"]
-      },
-      "EnergyMix_Sustainability": {
-        "Electricity": "Ontario grid (nuclear/hydro mix)",
-        "GreenSteelInvestments": "Converted BF to 100% EAF (2013)",
-        "CarbonCapture": "None",
-        "EmissionsTargets": "AM_Canada target: 30% cut by 2030, net-zero by 2050",
-        "EPA_Violations": "None reported (strict Canadian regulations)"
-      },
-      "RiskFactors": {
-        "Market": "NA construction demand",
-        "Operational": "Electricity price exposure",
-        "Labor": "Union (CAW)",
-        "Geographic": "Winter freeze (harbor access)"
-      },
-      "ModelInputs": {
-        "CO2Intensity": 0.5,
-        "LogisticsMode": "Rail",
-        "RedFlags": "Electricity cost volatility"
-      }
-    }
-  },
-  "FriedmanIndustries": {
-    "Longview": {
-      "PlantName": "Longview Mill (Flat Roll Division)",
-      "Location": {
-        "City": "Longview",
-        "State": "Texas",
-        "Country": "USA",
-        "Latitude": 32.5007,
-        "Longitude": -94.7405,
-        "GoogleMaps": "https://maps.google.com/?q=32.5007,-94.7405"
-      },
-      "YearCommissioned": "1965",
-      "Modernization": "Continuous annealer and cut-to-length added",
-      "SteelmakingProcess": {
-        "PrimaryRoute": "Receives flat steel coils (no melting):contentReference[oaicite:30]{index=30}",
-        "CokeOvens": "No",
-        "SinterPlants": "No",
-        "Pelletizers": "No",
-        "ScrapShare": "N/A",
-        "DRIShare": "N/A",
-        "HotMetalShare": "N/A",
-        "EAF_MVA": "N/A",
-        "BF_Capacity": null,
-        "FurnaceSize": null,
-        "RollingMill": "Slitting, cut-to-length lines (flat products):contentReference[oaicite:31]{index=31}"
-      },
-      "CarbonIntensity": {
-        "CO2_per_ton": 0.00495,
-        "Scope1": "N/A",
-        "Scope2": "N/A",
-        "Scope3": "N/A"
-      },
-      "ProductionCapacity": {
-        "AnnualCrudeSteel_Mt": 0.1,
-        "RollingCapacity": "Coil processing (tempering, slitting)",
-        "UtilizationRate": "N/A",
-        "FeedstockSources": "Purchased coils from mill suppliers"
-      },
-      "Logistics": {
-        "OutboundModes": ["Truck"],
-        "OnsiteRail": "No",
-        "Highways": "I-20",
-        "WaterAccess": "None",
-        "NearestPort": "Port of Houston (200 mi)",
-        "ShippingRadius": "South-Central US",
-        "LogisticsPartners": ["Union Pacific", "KCS"]
-      },
-      "EnergyMix_Sustainability": {
-        "Electricity": "ERCOT grid",
-        "GreenSteelInvestments": "None",
-        "CarbonCapture": "None",
-        "EmissionsTargets": "None disclosed",
-        "EPA_Violations": "None found"
-      },
-      "RiskFactors": {
-        "Market": "High-end flat steel competition",
-        "Operational": "Reliance on suppliers for product quality",
-        "Labor": "Non-union",
-        "Geographic": "Gulf Coast storm risk"
-      },
-      "ModelInputs": {
-        "CO2Intensity": 0.2,
-        "LogisticsMode": "Truck",
-        "RedFlags": "Niche market exposure"
-      }
-    }
-  }
+	"ClevelandCliffs": {
+		"Indiana Harbor": {
+			"PlantName": "Indiana Harbor Works",
+			"Location": {
+				"City": "East Chicago",
+				"State": "Indiana",
+				"Country": "USA",
+				"Latitude": 41.669553,
+				"Longitude": -87.438429,
+				"GoogleMaps": "https://maps.google.com/?q=41.669553,-87.438429"
+			},
+			"YearCommissioned": "1901",
+			"Modernization": "Blast Furnace #7 (4,163 m³) added 1980; hydrogen injection pipeline (2024):contentReference[oaicite:1]{index=1}",
+			"SteelmakingProcess": {
+				"PrimaryRoute": "Blast Furnace – Basic Oxygen Furnace (EAF idled):contentReference[oaicite:2]{index=2}",
+				"CokeOvens": "Yes (integrated BF plant)",
+				"SinterPlants": "Yes (integrated BF plant)",
+				"Pelletizers": "No (uses own pellet plants off-site)",
+				"ScrapShare": "EAF feedstock ~75% scrap:contentReference[oaicite:3]{index=3}",
+				"DRIShare": "0%",
+				"HotMetalShare": "100%",
+				"EAF_MVA": null,
+				"BF_Capacity": "4200 kt/year:contentReference[oaicite:4]{index=4}",
+				"FurnaceSize": "BF7: 4,163 m³ (capacity ~4.2 Mt/yr):contentReference[oaicite:5]{index=5}; BOF: 250 t (x2), 185 t (x2):contentReference[oaicite:6]{index=6}",
+				"RollingMill": "80\" hot-strip mill, pickling, 5-stand tandem cold mill, temper mill, hot-dip galvanizing line"
+			},
+			"CarbonIntensity": {
+				"CO2_per_ton": 1.54,
+				"Scope1": "N/A",
+				"Scope2": "N/A",
+				"Scope3": "N/A"
+			},
+			"ProductionCapacity": {
+				"AnnualCrudeSteel_Mt": 6.8,
+				"RollingCapacity": "Hot strip and cold rolling (~ multi-million t/yr)",
+				"UtilizationRate": "N/A",
+				"FeedstockSources": "Iron ore pellets (own mines), HBI (Toledo), metallurgical coal (coke ovens), scrap (FPT)"
+			},
+			"Logistics": {
+				"OutboundModes": ["Rail", "Barge"],
+				"OnsiteRail": "Yes",
+				"Highways": "Near I-90 (Indiana Toll Road)",
+				"WaterAccess": "Lake Michigan via Indiana Harbor Ship Canal",
+				"NearestPort": "Port of Indiana (Burns Harbor)",
+				"ShippingRadius": "Midwest/Great Lakes region",
+				"LogisticsPartners": ["CSX", "Norfolk Southern", "CN"]
+			},
+			"EnergyMix_Sustainability": {
+				"Electricity": "Regional grid (PJM/MISO), some renewable PPAs",
+				"GreenSteelInvestments": "Hydrogen-ready BF pipeline:contentReference[oaicite:7]{index=7}",
+				"CarbonCapture": "No CCS deployed (pilot H2 injection)",
+				"EmissionsTargets": "Reduce Scope1+2 intensity 30% by 2035; net-zero by 2050:contentReference[oaicite:8]{index=8}",
+				"EPA_Violations": "OSHA safety fines (2020):contentReference[oaicite:9]{index=9}; no major EPA air violations found"
+			},
+			"RiskFactors": {
+				"Market": "Automotive demand sensitivity, commodity price swings",
+				"Operational": "Blast furnace outages, aging equipment",
+				"Labor": "Unionized workforce (United Steelworkers)",
+				"Geographic": "Harsh winters (Lake transport), water availability"
+			},
+			"ModelInputs": {
+				"CO2Intensity": null,
+				"LogisticsMode": "Rail",
+				"RedFlags": "High BF reliance; large CO2 emitter"
+			}
+		}
+	},
+	"USSteel": {
+		"Gary Works": {
+			"PlantName": "Gary Works",
+			"Location": {
+				"City": "Gary",
+				"State": "Indiana",
+				"Country": "USA",
+				"Latitude": 41.620799,
+				"Longitude": -87.348266,
+				"GoogleMaps": "https://maps.google.com/?q=41.620799,-87.348266"
+			},
+			"YearCommissioned": "1908:contentReference[oaicite:10]{index=10}",
+			"Modernization": "Major $750M upgrade (2018):contentReference[oaicite:11]{index=11}; pig iron expansion (2023):contentReference[oaicite:12]{index=12}; carbon capture project (SkyCycle™) on BFs:contentReference[oaicite:13]{index=13}",
+			"SteelmakingProcess": {
+				"PrimaryRoute": "Blast Furnace – Basic Oxygen Furnace:contentReference[oaicite:14]{index=14}",
+				"CokeOvens": "Yes",
+				"SinterPlants": "Yes",
+				"Pelletizers": "No (uses external pellets)",
+				"ScrapShare": "Minimal (BF-driven); some scrap in BOFs",
+				"DRIShare": "0%",
+				"HotMetalShare": "100%",
+				"EAF_MVA": null,
+				"BF_Capacity": "BF14: 2540 kt/yr; BF4: 1360 kt; BF6: 1234 kt; BF8: 1361 kt:contentReference[oaicite:15]{index=15}",
+				"FurnaceSize": "BF14: 2,540 ktpy (new BF, 1974); smaller older BFs 1.2–1.4 Mtpy:contentReference[oaicite:16]{index=16}; BOF: 1300 kt (×6):contentReference[oaicite:17]{index=17}",
+				"RollingMill": "Hot strip, plate mills; pig iron and metalcasting operations (tinplate idled 2019)"
+			},
+			"CarbonIntensity": {
+				"CO2_per_ton": 1.81,
+				"Scope1": 1.64,
+				"Scope2": 0.18,
+				"Scope3": "N/A"
+			},
+			"ProductionCapacity": {
+				"AnnualCrudeSteel_Mt": 7.8,
+				"RollingCapacity": "Hot/coated coils, plate (multi-million t/yr)",
+				"UtilizationRate": "N/A",
+				"FeedstockSources": "Purchased ore/pellets; coking coal from Appalachia; scrap (Schaeffler scrap stream)"
+			},
+			"Logistics": {
+				"OutboundModes": ["Rail", "Lake Ship"],
+				"OnsiteRail": "Yes",
+				"Highways": "I-90 nearby",
+				"WaterAccess": "Calumet River to Lake Michigan",
+				"NearestPort": "Port of Indiana-Gary",
+				"ShippingRadius": "Nationwide via rail/Lake",
+				"LogisticsPartners": ["CN", "NS", "BNSF", "CSX"]
+			},
+			"EnergyMix_Sustainability": {
+				"Electricity": "Grid (MISO/PJM)",
+				"GreenSteelInvestments": "Carbon capture pilot at BFs:contentReference[oaicite:18]{index=18}",
+				"CarbonCapture": "SkyCycleTM (50 kT CO2/yr):contentReference[oaicite:19]{index=19}",
+				"EmissionsTargets": "US Steel (X) target unspecified in sources",
+				"EPA_Violations": "1980s Superfund cleanup (PCBs); 2016 federal fines ($2.2M) for Midwest plants"
+			},
+			"RiskFactors": {
+				"Market": "Steel price volatility, tariffs",
+				"Operational": "Aging blast furnaces, maintenance shutdowns",
+				"Labor": "US Steel unions (USW)",
+				"Geographic": "Lake shipping freeze risk, regional pollution constraints"
+			},
+			"ModelInputs": {
+				"CO2Intensity": null,
+				"LogisticsMode": "Rail",
+				"RedFlags": "Very high emissions; multibillion $ modernization needed"
+			}
+		}
+	},
+	"SteelDynamics": {
+		"Butler Works": {
+			"PlantName": "Butler Works",
+			"Location": {
+				"City": "Butler",
+				"State": "Indiana",
+				"Country": "USA",
+				"Latitude": 41.301,
+				"Longitude": -85.352,
+				"GoogleMaps": "https://maps.google.com/?q=41.3010,-85.3520"
+			},
+			"YearCommissioned": "1996:contentReference[oaicite:21]{index=21}",
+			"Modernization": "Expanded multiple times; installed modern EAFs (one 108 MW):contentReference[oaicite:22]{index=22}",
+			"SteelmakingProcess": {
+				"PrimaryRoute": "Electric Arc Furnace (mini-mill):contentReference[oaicite:23]{index=23}",
+				"CokeOvens": "No",
+				"SinterPlants": "No",
+				"Pelletizers": "No",
+				"ScrapShare": "High (all EAF feed)",
+				"DRIShare": "0%",
+				"HotMetalShare": "0%",
+				"EAF_MVA": "108 MVA (typical large EAF)",
+				"BF_Capacity": null,
+				"FurnaceSize": "EAF ~100–110 MVA each",
+				"RollingMill": "Hot strip, cold roll, galvanizing lines (flat products)"
+			},
+			"CarbonIntensity": {
+				"CO2_per_ton": 0.391,
+				"Scope1": 0.197,
+				"Scope2": 0.194,
+				"Scope3": 0.387
+			},
+			"ProductionCapacity": {
+				"AnnualCrudeSteel_Mt": 3.2,
+				"RollingCapacity": "Flat-rolled (multi-million t/yr)",
+				"UtilizationRate": "N/A",
+				"FeedstockSources": "Scrap (own and merchant), pig iron (2009–16 concession from ARCELORMITTAL ACU)"
+			},
+			"Logistics": {
+				"OutboundModes": ["Rail", "Truck"],
+				"OnsiteRail": "Yes",
+				"Highways": "Near US-20, I-69",
+				"WaterAccess": "None (inland)",
+				"NearestPort": "Port of Indiana (Burns Harbor) ~60 mi",
+				"ShippingRadius": "Midwest, national",
+				"LogisticsPartners": ["NS", "CN", "CSX"]
+			},
+			"EnergyMix_Sustainability": {
+				"Electricity": "Regional grid (MISO)",
+				"GreenSteelInvestments": "18 MW wind PPA, carbon capture studies (via DOE)",
+				"CarbonCapture": "Pilot study only",
+				"EmissionsTargets": "20% GHG reduction (Scope1+2) by 2025:contentReference[oaicite:24]{index=24}",
+				"EPA_Violations": "2017 Clean Air Act settlement ($3M) at Butler plant:contentReference[oaicite:25]{index=25}"
+			},
+			"RiskFactors": {
+				"Market": "Steel cycle; competition from imports",
+				"Operational": "Dependence on scrap market",
+				"Labor": "Union (USW)",
+				"Geographic": "Flooding (IN rivers), Midwest logistics"
+			},
+			"ModelInputs": {
+				"CO2Intensity": 0.6,
+				"LogisticsMode": "Truck",
+				"RedFlags": "Market cyclicality; lower emissions risk"
+			}
+		}
+	},
+	"CommercialMetals": {
+		"CentreTexasMill": {
+			"PlantName": "Centre Texas Recycling/Steel Mill",
+			"Location": {
+				"City": "Texas City",
+				"State": "Texas",
+				"Country": "USA",
+				"Latitude": 29.3869,
+				"Longitude": -94.9147,
+				"GoogleMaps": "https://maps.google.com/?q=29.3869,-94.9147"
+			},
+			"YearCommissioned": "N/A",
+			"Modernization": "The Texas City steel mill opened in 2005 (EAF-based)",
+			"SteelmakingProcess": {
+				"PrimaryRoute": "Electric Arc Furnace (mini-mill)",
+				"CokeOvens": "No",
+				"SinterPlants": "No",
+				"Pelletizers": "No",
+				"ScrapShare": "High (all steel from scrap)",
+				"DRIShare": "0%",
+				"HotMetalShare": "0%",
+				"EAF_MVA": "200 MVA",
+				"BF_Capacity": null,
+				"FurnaceSize": "Large EAF (~100–200 MVA)",
+				"RollingMill": "Rebar and wire rod mills"
+			},
+			"CarbonIntensity": {
+				"CO2_per_ton": 0.42,
+				"Scope1": 0.2,
+				"Scope2": 0.23,
+				"Scope3": 0.3
+			},
+			"ProductionCapacity": {
+				"AnnualCrudeSteel_Mt": 1.6,
+				"RollingCapacity": "Rebar: 1.2 Mt; Wire rod: 0.2 Mt",
+				"UtilizationRate": "N/A",
+				"FeedstockSources": "Electricity and scrap (100% of iron source)"
+			},
+			"Logistics": {
+				"OutboundModes": ["Truck", "Barge"],
+				"OnsiteRail": "Yes",
+				"Highways": "I-45, I-10",
+				"WaterAccess": "Galveston Bay (barge)",
+				"NearestPort": "Port Houston (25 mi)",
+				"ShippingRadius": "Gulf Coast region",
+				"LogisticsPartners": ["UP", "BNSF", "CN"]
+			},
+			"EnergyMix_Sustainability": {
+				"Electricity": "ERCOT grid; some wind PPAs",
+				"GreenSteelInvestments": "Scrap recycling programs",
+				"CarbonCapture": "None",
+				"EmissionsTargets": "30% reduction by 2030 (company-wide):contentReference[oaicite:26]{index=26}",
+				"EPA_Violations": "N/A"
+			},
+			"RiskFactors": {
+				"Market": "Construction cycle (rebar demand)",
+				"Operational": "Dependence on scrap supply",
+				"Labor": "Non-union (TX right-to-work)",
+				"Geographic": "Hurricane/sea-level risk"
+			},
+			"ModelInputs": {
+				"CO2Intensity": 0.5,
+				"LogisticsMode": "Barge",
+				"RedFlags": "Coastal storm risk"
+			}
+		}
+	},
+	"ArcelorMittal": {
+		"Dofasco": {
+			"PlantName": "Dofasco Inc. (ArcelorMittal Canada) – Hamilton Works",
+			"Location": {
+				"City": "Hamilton",
+				"State": "Ontario",
+				"Country": "Canada",
+				"Latitude": 43.251,
+				"Longitude": -79.87,
+				"GoogleMaps": "https://maps.google.com/?q=43.2510,-79.8700"
+			},
+			"YearCommissioned": "1912",
+			"Modernization": "Modern EAFs (six 100 MW); new galvanizing line (2023)",
+			"SteelmakingProcess": {
+				"PrimaryRoute": "Electric Arc Furnace (all steel from scrap)",
+				"CokeOvens": "No",
+				"SinterPlants": "No",
+				"Pelletizers": "No",
+				"ScrapShare": "100% (no BF)",
+				"DRIShare": "0%",
+				"HotMetalShare": "0%",
+				"EAF_MVA": "Six 100-MVA furnaces",
+				"FurnaceSize": "EAFs ~450 t each",
+				"RollingMill": "Hot/Cold rolled, coating, plate mills"
+			},
+			"CarbonIntensity": {
+				"CO2_per_ton": 1.75,
+				"Scope1": "N/A",
+				"Scope2": "N/A",
+				"Scope3": "N/A"
+			},
+			"ProductionCapacity": {
+				"AnnualCrudeSteel_Mt": 3.4,
+				"RollingCapacity": "Hot/cold coil, plate",
+				"UtilizationRate": "90%",
+				"FeedstockSources": "Domestic scrap; grid electricity (Ontario mix ~60% nuclear)"
+			},
+			"Logistics": {
+				"OutboundModes": ["Truck", "Rail", "Ship"],
+				"OnsiteRail": "Yes",
+				"Highways": "QEW nearby",
+				"WaterAccess": "Lake Ontario via Burlington Shipping Canal",
+				"NearestPort": "Port of Hamilton",
+				"ShippingRadius": "Canada/NE USA",
+				"LogisticsPartners": ["CN", "CP"]
+			},
+			"EnergyMix_Sustainability": {
+				"Electricity": "Ontario grid (nuclear/hydro mix)",
+				"GreenSteelInvestments": "Converted BF to 100% EAF (2013)",
+				"CarbonCapture": "None",
+				"EmissionsTargets": "AM_Canada target: 30% cut by 2030, net-zero by 2050",
+				"EPA_Violations": "None reported (strict Canadian regulations)"
+			},
+			"RiskFactors": {
+				"Market": "NA construction demand",
+				"Operational": "Electricity price exposure",
+				"Labor": "Union (CAW)",
+				"Geographic": "Winter freeze (harbor access)"
+			},
+			"ModelInputs": {
+				"CO2Intensity": 0.5,
+				"LogisticsMode": "Rail",
+				"RedFlags": "Electricity cost volatility"
+			}
+		}
+	},
+	"FriedmanIndustries": {
+		"Longview": {
+			"PlantName": "Longview Mill (Flat Roll Division)",
+			"Location": {
+				"City": "Longview",
+				"State": "Texas",
+				"Country": "USA",
+				"Latitude": 32.5007,
+				"Longitude": -94.7405,
+				"GoogleMaps": "https://maps.google.com/?q=32.5007,-94.7405"
+			},
+			"YearCommissioned": "1965",
+			"Modernization": "Continuous annealer and cut-to-length added",
+			"SteelmakingProcess": {
+				"PrimaryRoute": "Receives flat steel coils (no melting):contentReference[oaicite:30]{index=30}",
+				"CokeOvens": "No",
+				"SinterPlants": "No",
+				"Pelletizers": "No",
+				"ScrapShare": "N/A",
+				"DRIShare": "N/A",
+				"HotMetalShare": "N/A",
+				"EAF_MVA": "N/A",
+				"BF_Capacity": null,
+				"FurnaceSize": null,
+				"RollingMill": "Slitting, cut-to-length lines (flat products):contentReference[oaicite:31]{index=31}"
+			},
+			"CarbonIntensity": {
+				"CO2_per_ton": 0.00495,
+				"Scope1": "N/A",
+				"Scope2": "N/A",
+				"Scope3": "N/A"
+			},
+			"ProductionCapacity": {
+				"AnnualCrudeSteel_Mt": 0.1,
+				"RollingCapacity": "Coil processing (tempering, slitting)",
+				"UtilizationRate": "N/A",
+				"FeedstockSources": "Purchased coils from mill suppliers"
+			},
+			"Logistics": {
+				"OutboundModes": ["Truck"],
+				"OnsiteRail": "No",
+				"Highways": "I-20",
+				"WaterAccess": "None",
+				"NearestPort": "Port of Houston (200 mi)",
+				"ShippingRadius": "South-Central US",
+				"LogisticsPartners": ["Union Pacific", "KCS"]
+			},
+			"EnergyMix_Sustainability": {
+				"Electricity": "ERCOT grid",
+				"GreenSteelInvestments": "None",
+				"CarbonCapture": "None",
+				"EmissionsTargets": "None disclosed",
+				"EPA_Violations": "None found"
+			},
+			"RiskFactors": {
+				"Market": "High-end flat steel competition",
+				"Operational": "Reliance on suppliers for product quality",
+				"Labor": "Non-union",
+				"Geographic": "Gulf Coast storm risk"
+			},
+			"ModelInputs": {
+				"CO2Intensity": 0.2,
+				"LogisticsMode": "Truck",
+				"RedFlags": "Niche market exposure"
+			}
+		}
+	}
 }

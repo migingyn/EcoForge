@@ -124,3 +124,13 @@ def calculate_final_scores(destination_lat, destination_lon, weights):
     results.sort(key=lambda r: r["final_score"], reverse=True)
 
     return results
+EMISSIONS = {
+    "truck": 73.92, # Unit of Measurement: 73.92g CO₂e/tonne-km 
+    "rail/train": 11.94, # Unit of Measurement: 11.94g CO₂e/tonne-km
+    "ship": 3.94 # Unit of Measurement: 3.94g CO₂e/tonne-km
+}
+
+def calculate_transport_emissions(distance: float, tonnage: float, mode: str):
+    emission_factor = EMISSIONS[mode]
+    emissions = distance * tonnage * emission_factor
+    return emissions
