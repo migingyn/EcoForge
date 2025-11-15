@@ -65,8 +65,8 @@ def get_co2_scores():
     return calculate_co2_scores()
 
 @app.get("/logistics-scores")
-def get_logistics_scores(destination_lat: float, destination_lon: float):
-    return calculate_logistics_score(destination_lat, destination_lon)
+def get_logistics_scores(destination_lat: float, destination_lon: float, tonnage: float, mode: str):
+    return calculate_logistics_score(destination_lat, destination_lon, tonnage, mode)
 
 @app.post("/optimize")
 def optimize(req: OptimizeRequest):
