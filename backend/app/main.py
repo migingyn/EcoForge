@@ -1,8 +1,11 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from pydantic import BaseModel
 from typing import Dict
+
+import httpx
+import os
 
 from app.services.data_loader import load_supplier_data, supplier_data
 from app.services.scoring import calculate_cost_scores, calculate_risk_scores, calculate_co2_scores, calculate_logistics_score, calculate_final_scores
@@ -77,3 +80,37 @@ def optimize(req: OptimizeRequest):
     )
 
     return {"results": results}
+
+USER_AGENT_EMAIL = os.getenv("USER_AGENT_EMAIL")
+
+@app.get("/geocode")
+async def geocode_location(q: str):
+    """
+    Proxy endpoint: frontend calls this, backend calls Nominatim.
+    Example: GET /geocode?q=Chicago
+    """
+    url = "https://nominatim.openstreetmap.org/search"
+    params = {
+        "format": "json",
+        "q": q,
+    }
+    headers = {
+        "User-Agent": f"EcoForge/1.0 ({USER_AGENT_EMAIL})",
+    }
+
+    async with httpx.AsyncClient() as client:
+        resp = await client.get(url, params=params, headers=headers)
+
+    if resp.status_code != 200:
+        raise HTTPException(status_code=502, detail="Geocoding service error")
+
+    data = resp.json()
+    if not data:
+        raise HTTPException(status_code=404, detail="Location not found")
+
+    first = data[0]
+    return {
+        "lat": float(first["lat"]),
+        "lon": float(first["lon"]),
+        "displayName": first["display_name"],
+    }

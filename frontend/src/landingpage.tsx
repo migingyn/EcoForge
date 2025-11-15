@@ -1,8 +1,16 @@
 import React, { useState } from "react";
+import geocode from "./util/geocode";
 
 export function LandingPage() {
   const [priority, setPriority] = useState("cost");
   const [location, setLocation] = useState("");
+  const [volume, setVolume] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const { lat, lon } = await geocode(location);
+    console.log(lat, lon);
+  };
 
   return (
     <div className="w-full text-center">
@@ -17,7 +25,10 @@ export function LandingPage() {
       </p>
 
       {/* Form Card */}
-      <div className="bg-white rounded-2xl p-8 shadow-xl w-full max-w-xl mx-auto">
+      <form
+        className="bg-white rounded-2xl p-8 shadow-xl w-full max-w-xl mx-auto"
+        onSubmit={handleSubmit}
+      >
         {/* Location */}
         <label className="block text-left font-medium mb-2 text-gray-700">
           Where do you need steel delivered?
@@ -34,7 +45,11 @@ export function LandingPage() {
         <label className="block text-left font-medium mb-2 text-gray-700">
           How much do you need?
         </label>
-        <select className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#67C28A] focus:outline-none">
+        <select
+          value={volume}
+          onChange={(e) => setVolume(e.target.value)}
+          className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#67C28A] focus:outline-none"
+        >
           <option value="">Select volume</option>
           <option>1–50 tons</option>
           <option>50–200 tons</option>
@@ -86,10 +101,13 @@ export function LandingPage() {
         </div>
 
         {/* CTA Button */}
-        <button className="w-full bg-[#67C28A] text-white font-semibold py-3 rounded-lg hover:bg-[#5AB37A] transition">
+        <button
+          type="submit"
+          className="w-full bg-[#67C28A] text-white font-semibold py-3 rounded-lg hover:bg-[#5AB37A] transition"
+        >
           Find My Best Mill
         </button>
-      </div>
+      </form>
     </div>
   );
 }
