@@ -1,0 +1,44 @@
+{
+  "CLF": {
+    "company": "Cleveland-Cliffs – Indiana Harbor Works",
+    "lat": 41.669553,
+    "lon": -87.438429,
+    "co2_per_ton": 1.54,
+    "logistics_mode": "Rail"
+  },
+  "X": {
+    "company": "US Steel – Gary Works",
+    "lat": 41.620799,
+    "lon": -87.348266,
+    "co2_per_ton": 1.81,
+    "logistics_mode": "Rail"
+  },
+  "STLD": {
+    "company": "Steel Dynamics – Butler Works",
+    "lat": 41.301,
+    "lon": -85.352,
+    "co2_per_ton": 0.6,
+    "logistics_mode": "Truck"
+  },
+  "CMC": {
+    "company": "Commercial Metals – Texas City Mill",
+    "lat": 29.3869,
+    "lon": -94.9147,
+    "co2_per_ton": 0.5,
+    "logistics_mode": "Barge"
+  },
+  "MT": {
+    "company": "ArcelorMittal – Dofasco (Hamilton)",
+    "lat": 43.251,
+    "lon": -79.87,
+    "co2_per_ton": 0.5,
+    "logistics_mode": "Rail"
+  },
+  "FRD": {
+    "company": "Friedman Industries – Longview",
+    "lat": 32.5007,
+    "lon": -94.7405,
+    "co2_per_ton": 0.2,
+    "logistics_mode": "Truck"
+  }
+}

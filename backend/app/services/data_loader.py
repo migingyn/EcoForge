@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import json
 
 DATA_PATH = "app/data"
 
@@ -23,5 +24,17 @@ def load_supplier_data():
             "avg_price": float(avg_price),
             "volatility": float(volatility_30d)
         }
+
+supplier_metadata = None
+
+def load_supplier_metadata():
+    global supplier_metadata
+
+    filepath = os.path.join(DATA_PATH, "supplier_metadata_cleaned.json")
+    if supplier_metadata is None:
+
+        with open(filepath, "r") as f:
+            supplier_metadata = json.load(f)
     
-    print(supplier_data)
+    return supplier_metadata
+        
