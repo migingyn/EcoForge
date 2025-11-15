@@ -1,5 +1,13 @@
 # EcoForge
 
+Setting up Python backend:
+
+1. Make sure you have Python3.11 installed
+2. `cd backend`
+3. `python3.11 -m venv venv`
+4. `source venv/bin/activate`
+5. `pip install -r requirements.txt`
+
 # PHASE 0 — Setup (≈ 30 min)
 Goal: Establish a working development environment.
 - Initialize GitHub repo
