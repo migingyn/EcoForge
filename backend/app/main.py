@@ -1,8 +1,20 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.services.data_loader import load_supplier_data, supplier_data
+from contextlib import asynccontextmanager
+
+# Load data on startup
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    load_supplier_data()
+    print("Supplier data loaded.")
+
+    yield
+
+    print("Shutting down...")
 
 # Create app
-app = FastAPI(title="Steel Tradeoff API")
+app = FastAPI(title="Steel Tradeoff API", lifespan=lifespan)
 
 # CORS 
 origins = [
@@ -17,6 +29,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
 
 # Basic Routes
 @app.get("/")
