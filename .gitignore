@@ -1,2 +1,2 @@
-backend/venv/
-*/.env
+steel-tradeoff/backend/venv/
+steel-tradeoff/*/.env
