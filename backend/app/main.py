@@ -1,8 +1,22 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from contextlib import asynccontextmanager
+
+from app.services.data_loader import load_supplier_data, supplier_data
+from app.services.scoring import calculate_cost_scores, calculate_risk_scores
+
+# Load data on startup
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    load_supplier_data()
+    print("Supplier data loaded.")
+
+    yield
+
+    print("Shutting down...")
 
 # Create app
-app = FastAPI(title="Steel Tradeoff API")
+app = FastAPI(title="Steel Tradeoff API", lifespan=lifespan)
 
 # CORS 
 origins = [
@@ -26,3 +40,15 @@ def root():
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+@app.get("/suppliers")
+def get_suppliers():
+    return supplier_data
+
+@app.get("/cost_scores")
+def get_cost_scores():
+    return calculate_cost_scores()
+
+@app.get("/risk-scores")
+def get_risk_scores():
+    return calculate_risk_scores()
