@@ -131,8 +131,3 @@ def calculate_final_scores(destination_lat, destination_lon, weights):
     results.sort(key=lambda r: r["final_score"], reverse=True)
 
     return results
-
-def calculate_transport_emissions(distance: float, tonnage: float, mode: str):
-    emission_factor = EMISSIONS[mode]
-    emissions = distance * tonnage * emission_factor
-    return emissions
