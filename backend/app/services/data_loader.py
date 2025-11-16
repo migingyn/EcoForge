@@ -4,7 +4,7 @@ import json
 
 DATA_PATH = "app/data"
 
-SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X"]
+SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X", "NUE"]
 
 supplier_data = {}
 
@@ -24,6 +24,8 @@ def load_supplier_data():
             "avg_price": float(avg_price),
             "volatility": float(volatility_30d)
         }
+    
+    return supplier_data
 
 supplier_metadata = None
 
