@@ -52,10 +52,11 @@ export function LandingPage() {
       >
         {/* Location */}
         <label className="block text-left font-medium mb-2 text-gray-700">
-          Where do you need steel delivered?
+          Which city are you delivering to?
         </label>
-        <input
-          type="text"
+        <CitySelect
+          value={destination}
+          onChange={setDestination}
           placeholder="e.g., Chicago, IL"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
@@ -72,11 +73,12 @@ export function LandingPage() {
           className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#67C28A] focus:outline-none"
         >
           <option value="">Select volume</option>
-          <option>1–50 tons</option>
-          <option>50–200 tons</option>
-          <option>200–500 tons</option>
-          <option>500+ tons</option>
+          <option>1–50 tons</option>  
+          <option>50–250 tons</option>
+          <option>250–1000 tons</option>
+          <option>1000+ tons</option>
         </select>
+
 
         {/* Priority */}
         <label className="block text-left font-medium mb-3 text-gray-700">
