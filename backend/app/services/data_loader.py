@@ -39,4 +39,11 @@ def load_supplier_metadata():
             supplier_metadata = json.load(f)
     
     return supplier_metadata
-        
+
+def load_supplier_metadata_complete():
+
+    filepath = os.path.join(DATA_PATH, "supplier_metadata.json")
+    with open(filepath, "r") as f:
+        metadata = json.load(f)
+    
+    return metadata

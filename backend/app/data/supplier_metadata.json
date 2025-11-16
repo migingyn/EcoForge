@@ -1,6 +1,6 @@
 {
   "CLF": {
-    "Name": "ClevelandCliffs",
+    "Name": "Cleveland Cliffs",
     "Plants": {
       "Indiana Harbor Works": {
         "Location": "East Chicago, Indiana, USA",
@@ -93,7 +93,7 @@
     }
   },
   "X": {
-    "Name": "USSteel",
+    "Name": "US Steel",
     "Plants": {
       "Gary Works": {
         "Location": "Gary, Indiana, USA",
@@ -126,7 +126,7 @@
     },
     "YearCommissioned": "1901",
     "SteelmakingProcess": {
-      "PrimaryRoute": "Blast Furnace – Basic Oxygen Furnace:contentReference[oaicite:14]{index=14}",
+      "PrimaryRoute": "Blast Furnace – Basic Oxygen Furnace",
       "CokeOvens": "Yes",
       "SinterPlants": "Yes",
       "Pelletizers": "No (uses external pellets)",
@@ -134,8 +134,8 @@
       "DRIShare": "0%",
       "HotMetalShare": "100%",
       "EAF_MVA": null,
-      "BF_Capacity": "BF14: 2540 kt/yr; BF4: 1360 kt; BF6: 1234 kt; BF8: 1361 kt:contentReference[oaicite:15]{index=15}",
-      "FurnaceSize": "BF14: 2,540 ktpy (new BF, 1974); smaller older BFs 1.2–1.4 Mtpy:contentReference[oaicite:16]{index=16}; BOF: 1300 kt (×6):contentReference[oaicite:17]{index=17}",
+      "BF_Capacity": "BF14: 2540 kt/yr; BF4: 1360 kt; BF6: 1234 kt; BF8: 1361 kt",
+      "FurnaceSize": "BF14: 2,540 ktpy (new BF, 1974); smaller older BFs 1.2–1.4 Mtpy; BOF: 1300 kt (×6)",
       "RollingMill": "Hot strip, plate mills; pig iron and metalcasting operations (tinplate idled 2019)"
     },
     "CarbonIntensity": {
@@ -161,8 +161,8 @@
     },
     "EnergyMix_Sustainability": {
       "Electricity": "Grid (MISO/PJM)",
-      "GreenSteelInvestments": "Carbon capture pilot at BFs:contentReference[oaicite:18]{index=18}",
-      "CarbonCapture": "SkyCycleTM (50 kT CO2/yr):contentReference[oaicite:19]{index=19}",
+      "GreenSteelInvestments": "Carbon capture pilot at BFs",
+      "CarbonCapture": "SkyCycleTM (50 kT CO2/yr)",
       "EmissionsTargets": "US Steel (X) target unspecified in sources",
       "EPA_Violations": "1980s Superfund cleanup (PCBs); 2016 federal fines ($2.2M) for Midwest plants"
     },
@@ -179,7 +179,7 @@
     }
   },
   "STLD": {
-    "Name": "SteelDynamics",
+    "Name": "Steel Dynamics",
     "Plants": {
       "Butler Facility": {
         "Location": "Butler, Indiana, USA",
@@ -212,7 +212,7 @@
     },
     "YearCommissioned": "1993",
     "SteelmakingProcess": {
-      "PrimaryRoute": "Electric Arc Furnace (mini-mill):contentReference[oaicite:23]{index=23}",
+      "PrimaryRoute": "Electric Arc Furnace (mini-mill)",
       "CokeOvens": "No",
       "SinterPlants": "No",
       "Pelletizers": "No",
@@ -249,8 +249,8 @@
       "Electricity": "Regional grid (MISO)",
       "GreenSteelInvestments": "18 MW wind PPA, carbon capture studies (via DOE)",
       "CarbonCapture": "Pilot study only",
-      "EmissionsTargets": "20% GHG reduction (Scope1+2) by 2025:contentReference[oaicite:24]{index=24}",
-      "EPA_Violations": "2017 Clean Air Act settlement ($3M) at Butler plant:contentReference[oaicite:25]{index=25}"
+      "EmissionsTargets": "20% GHG reduction (Scope1+2) by 2025",
+      "EPA_Violations": "2017 Clean Air Act settlement ($3M) at Butler plant"
     },
     "RiskFactors": {
       "Market": "Steel cycle; competition from imports",
@@ -265,7 +265,7 @@
     }
   },
   "CMC": {
-    "Name": "CommericalMetals",
+    "Name": "Commerical Metals",
     "Plants": {
       "CMC Steel Alabama (Birmingham)": {
         "Location": "Birmingham, Alabama, USA",
@@ -282,7 +282,7 @@
         "Year commissioned": 1982
       },
       "CMC Steel Orlando (Century Metals)": {
-        "Location": "Orlando, Florida, USA (acquired):contentReference[oaicite:111]{index=111}",
+        "Location": "Orlando, Florida, USA (acquired)",
         "Latitude": 28.632755,
         "Longitude": -81.4697599,
         "Google Maps": "https://maps.google.com/?q=28.632755,-81.4697599",
@@ -328,7 +328,7 @@
       "Electricity": "ERCOT grid; some wind PPAs",
       "GreenSteelInvestments": "Scrap recycling programs",
       "CarbonCapture": "None",
-      "EmissionsTargets": "30% reduction by 2030 (company-wide):contentReference[oaicite:26]{index=26}",
+      "EmissionsTargets": "30% reduction by 2030 (company-wide)",
       "EPA_Violations": "N/A"
     },
     "RiskFactors": {
@@ -342,7 +342,8 @@
       "RedFlags": "Coastal storm risk"
     }
   },
-  "ArcelorMittal": {
+  "MT": {
+    "Name": "Arcelor Mittal",
     "Plants": {
       "AM/NS Calvert, Alabama": {
         "Location": "Calvert, Alabama, USA",
@@ -351,7 +352,7 @@
         "Google Maps": "https://maps.google.com/?q=31.1360772,-87.9988844",
         "Year commissioned": 1994
       },
-      "ArcelorMittal Texas HBI": {
+      "Arcelo Mittal Texas HBI": {
         "Location": "Corpus Christi, Texas, USA",
         "Latitude": 27.8900547,
         "Longitude": -97.2876789,
@@ -412,37 +413,38 @@
       "RedFlags": "Electricity cost volatility"
     }
   },
-  "FriedmanIndustries": {
+  "FRD": {
+    "Name": "Friedman Industries",
     "Plants": {
-      "FriedmanIndustries East Chicago": {
+      "Friedman Industries East Chicago": {
         "Location": "East Chicago, Indiana, USA",
         "Latitude": 41.6381295,
         "Longitude": -87.4636669,
         "Google Maps": "https://maps.google.com/?q=41.6381295,-87.4636669",
         "Year commissioned": 1965
       },
-      "FriedmanIndustries Granite City": {
+      "Friedman Industries Granite City": {
         "Location": "Granite City, Illinois, USA",
         "Latitude": 38.7180206,
         "Longitude": -90.1608787,
         "Google Maps": "https://maps.google.com/?q=38.7180206,-90.1608787",
         "Year commissioned": 1965
       },
-      "FriedmanIndustries Sinton": {
+      "Friedman Industries Sinton": {
         "Location": "Sinton, Texas, USA",
         "Latitude": 28.0603359,
         "Longitude": -97.4867104,
         "Google Maps": "https://maps.google.com/?q=28.0603359,-97.4867104",
         "Year commissioned": 1965
       },
-      "FriedmanIndustries Hickman": {
+      "Friedman Industries Hickman": {
         "Location": "Hickman, Arkansas, USA",
         "Latitude": 35.9484473,
         "Longitude": -89.7362628,
         "Google Maps": "https://maps.google.com/?q=35.9484473,-89.7362628",
         "Year commissioned": 1991
       },
-      "FriedmanIndustries Decatur": {
+      "Friedman Industries Decatur": {
         "Location": "Decatur, Alabama, USA",
         "Latitude": 34.6446214,
         "Longitude": -87.0768585,
@@ -452,7 +454,7 @@
     },
     "YearCommissioned": "1965",
     "SteelmakingProcess": {
-      "PrimaryRoute": "Receives flat steel coils (no melting):contentReference[oaicite:30]{index=30}",
+      "PrimaryRoute": "Receives flat steel coils (no melting)",
       "CokeOvens": "No",
       "SinterPlants": "No",
       "Pelletizers": "No",
@@ -462,7 +464,7 @@
       "EAF_MVA": "N/A",
       "BF_Capacity": null,
       "FurnaceSize": null,
-      "RollingMill": "Slitting, cut-to-length lines (flat products):contentReference[oaicite:31]{index=31}"
+      "RollingMill": "Slitting, cut-to-length lines (flat products)"
     },
     "CarbonIntensity": {
       "CO2_per_ton": 0.00495,
@@ -504,7 +506,8 @@
       "RedFlags": "Niche market exposure"
     }
   },
-  "Nucor Corp": {
+  "NUE": {
+    "Name": "Nucor Corp",
     "Plants": {
       "Nucor Steel Hertford Plant": {
         "Location": "Cofield, North Carolina, USA",
@@ -521,7 +524,7 @@
         "Year commissioned": 1996
       },
       "Nucor Steel Tuscaloosa": {
-        "Location": "Tuscaloosa, Alabama, USA:content",
+        "Location": "Tuscaloosa, Alabama, USA",
         "Latitude": 33.234761,
         "Longitude": -87.508498,
         "Google Maps": "https://maps.google.com/?q=33.234761,-87.508498",
@@ -543,11 +546,11 @@
       }
     },
     "Steelmaking Process": {
-      "Primary route": "Electric Arc Furnace (EAF):contentReference[oaicite:2]{index=2}",
+      "Primary route": "Electric Arc Furnace (EAF)",
       "Coke ovens": "No",
       "Sinter plant": "No",
       "Pelletizer": "No",
-      "Scrap share": "72.9%:contentReference[oaicite:3]{index=3}",
+      "Scrap share": "72.9%",
       "DRI share": "0%",
       "Hot metal share": "0%",
       "EAF MVA rating": "50 MVA (approx)",
@@ -564,7 +567,7 @@
       "Annual crude steel (Mt)": 1.542,
       "Rolling/finishing (Mt)": 1.2,
       "Utilization rate": "N/A",
-      "Feedstock": "100% recycled scrap:contentReference[oaicite:5]{index=5}"
+      "Feedstock": "100% recycled scrap"
     },
     "Logistics & Transport": {
       "Default outbound mode": "Rail",
@@ -581,7 +584,7 @@
       "Green steel projects": "Focus on scrap recycling",
       "Hydrogen DRI": "None",
       "Carbon capture": "None",
-      "Emissions targets": "Net-zero by 2050:contentReference[oaicite:6]{index=6}",
+      "Emissions targets": "Net-zero by 2050",
       "EPA violations": "None found"
     },
     "Risk Factors": {
