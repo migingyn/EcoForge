@@ -5,7 +5,6 @@ import type { CityResult } from "./api/geodb";
 
 export function LandingPage() {
   const [priority, setPriority] = useState("cost");
-  const [location, setLocation] = useState("");
   const [volume, setVolume] = useState("");
   const [destination, setDestination] = useState<CityResult | null>(null);
 
@@ -13,7 +12,7 @@ export function LandingPage() {
     e.preventDefault();
 
     if (!destination) {
-      alert("Please select a city.");
+      alert("Please select a destination city.");
       return;
     }
 
@@ -21,7 +20,7 @@ export function LandingPage() {
       const lat = destination.latitude;
       const lon = destination.longitude;
 
-      let weights = {
+      const weights = {
         cost: priority === "cost" ? 9 : 1,
         co2: priority === "sustainability" ? 9 : 1,
         risk: priority === "reliability" ? 9 : 1,
@@ -34,8 +33,7 @@ export function LandingPage() {
       };
 
       const response = await optimizeRequest(lat, lon, weights);
-
-      console.log("Optimized response: ", response);
+      console.log("Optimized response:", response);
     } catch (err) {
       console.error(err);
     }
@@ -62,6 +60,7 @@ export function LandingPage() {
         <label className="block text-left font-medium mb-2 text-gray-700">
           Which city are you delivering to?
         </label>
+
         <CitySelect
           value={destination}
           onChange={setDestination}
@@ -73,6 +72,7 @@ export function LandingPage() {
         <label className="block text-left font-medium mb-2 text-gray-700">
           How much do you need?
         </label>
+
         <select
           value={volume}
           onChange={(e) => setVolume(e.target.value)}
@@ -94,12 +94,11 @@ export function LandingPage() {
           <button
             type="button"
             onClick={() => setPriority("cost")}
-            className={`px-5 py-2 rounded-full border transition
-              ${
-                priority === "cost"
-                  ? "bg-[#0D1A2D] text-white border-transparent"
-                  : "bg-white text-gray-700 border-gray-300"
-              }`}
+            className={`px-5 py-2 rounded-full border transition ${
+              priority === "cost"
+                ? "bg-[#0D1A2D] text-white border-transparent"
+                : "bg-white text-gray-700 border-gray-300"
+            }`}
           >
             Cost
           </button>
@@ -107,12 +106,11 @@ export function LandingPage() {
           <button
             type="button"
             onClick={() => setPriority("sustainability")}
-            className={`px-5 py-2 rounded-full border transition
-              ${
-                priority === "sustainability"
-                  ? "bg-[#0D1A2D] text-white border-transparent"
-                  : "bg-white text-gray-700 border-gray-300"
-              }`}
+            className={`px-5 py-2 rounded-full border transition ${
+              priority === "sustainability"
+                ? "bg-[#0D1A2D] text-white border-transparent"
+                : "bg-white text-gray-700 border-gray-300"
+            }`}
           >
             Sustainability
           </button>
@@ -120,18 +118,17 @@ export function LandingPage() {
           <button
             type="button"
             onClick={() => setPriority("reliability")}
-            className={`px-5 py-2 rounded-full border transition
-              ${
-                priority === "reliability"
-                  ? "bg-[#0D1A2D] text-white border-transparent"
-                  : "bg-white text-gray-700 border-gray-300"
-              }`}
+            className={`px-5 py-2 rounded-full border transition ${
+              priority === "reliability"
+                ? "bg-[#0D1A2D] text-white border-transparent"
+                : "bg-white text-gray-700 border-gray-300"
+            }`}
           >
             Reliability
           </button>
         </div>
 
-        {/* CTA Button */}
+        {/* CTA */}
         <button
           type="submit"
           className="w-full bg-[#67C28A] text-white font-semibold py-3 rounded-lg hover:bg-[#5AB37A] transition"
