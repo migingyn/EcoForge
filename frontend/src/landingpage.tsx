@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
-import { CitySelect } from './components/CitySelect'
-import type { CityResult } from './api/geodb'
-
+import React, { useState } from "react";
+import { CitySelect } from "./components/CitySelect";
+import type { CityResult } from "./api/geodb";
 
 export function LandingPage({ onFindMill }: { onFindMill: (city: string, 
     volume: string, option: string) => void }) {
@@ -25,7 +24,8 @@ export function LandingPage({ onFindMill }: { onFindMill: (city: string,
       </h1>
 
       <p className="text-gray-300 mb-10 text-lg">
-        Enter your criteria and we’ll recommend the best steel mills for your project
+        Enter your criteria and we’ll recommend the best steel mills for your
+        project
       </p>
 
       {/* Form Card */}
@@ -59,7 +59,6 @@ export function LandingPage({ onFindMill }: { onFindMill: (city: string,
           <option value="1000+">3000+ tons</option>
         </select>
 
-
         {/* Priority */}
         <label className="block text-left font-medium mb-3 text-gray-700">
           What matters most to you?
@@ -90,7 +89,7 @@ export function LandingPage({ onFindMill }: { onFindMill: (city: string,
                   : "bg-white text-gray-700 border-gray-300"
               }`}
           >
-             Sustainability
+            Sustainability
           </button>
 
           <button
@@ -103,7 +102,7 @@ export function LandingPage({ onFindMill }: { onFindMill: (city: string,
                   : "bg-white text-gray-700 border-gray-300"
               }`}
           >
-             Reliability
+            Reliability
           </button>
         </div>
 
