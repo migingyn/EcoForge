@@ -39,6 +39,8 @@ export function LandingPage({ onFindMill }: { onFindMill: (city: string,
           value={destination}
           onChange={setDestination}
           placeholder="e.g., Chicago, IL"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
           className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-ecoGreen focus:outline-none"
         />
 

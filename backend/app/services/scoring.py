@@ -1,7 +1,7 @@
 from math import radians, sin, cos, asin, sqrt
 from typing import List, Dict
 
-from app.services.data_loader import supplier_data, supplier_metadata
+from app.services.data_loader import load_supplier_data, load_supplier_metadata
 
 SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X"]
 EMISSIONS = {
@@ -32,18 +32,19 @@ def inverse_normalizer(values: List[float]) -> List[float]:
     
 # Calculates score based on cost
 def calculate_cost_scores() -> Dict[str, float]:
-    closing_prices = [supplier_data[company]["avg_price"] for company in SUPPLIERS]
+    rank_order = ["FRD", "STLD", "CMC", "MT", "X", "CLF"]
 
-    # Want lowest price to have highest score
-    cost_scores = inverse_normalizer(closing_prices)
+    # Convert rank → normalized score (1 = best, 0 = worst)
+    cost_scores = {
+        supplier: 1 - (i / (len(rank_order) - 1))
+        for i, supplier in enumerate(rank_order)
+    }
 
-    results = {}
-    for company, score in zip(SUPPLIERS, cost_scores):
-        results[company] = score
-    
-    return results
+    return cost_scores
 
 def calculate_risk_scores() -> Dict[str, float]:
+    supplier_data = load_supplier_data()
+
     volatilities = [supplier_data[company]["volatility"] for company in SUPPLIERS]
 
     risk_scores = inverse_normalizer(volatilities)
@@ -55,6 +56,8 @@ def calculate_risk_scores() -> Dict[str, float]:
     return results
 
 def calculate_co2_scores() -> Dict[str, float]:
+    supplier_metadata = load_supplier_metadata()
+
     co2_usages = [supplier_metadata[company]["co2_per_ton"] for company in SUPPLIERS]
 
     co2_scores = inverse_normalizer(co2_usages)
@@ -78,14 +81,25 @@ def haversine(lat1: float, lon1: float, lat2:  float, lon2: float) -> float:
 
     return R * c
 
-def calculate_logistics_score(destination_lat, destination_lon, tonnage: float, mode: str):
+def calculate_logistics_score(destination_lat, destination_lon, tonnage: float):
+    supplier_metadata = load_supplier_metadata()
+
+    MODE_MAP = {
+        "Truck": "truck",
+        "Rail": "rail/train",
+        "Barge": "ship",
+    }
+
     emissions = []
 
     for company in SUPPLIERS:
         origin_lat = supplier_metadata[company]["lat"]
         origin_lon = supplier_metadata[company]["lon"]
         distance = haversine(destination_lat, destination_lon, origin_lat, origin_lon)
-        emission = distance * tonnage * EMISSIONS[mode]
+
+        logistics_mode = supplier_metadata[company]["logistics_mode"]
+        emission_mode = MODE_MAP[logistics_mode]
+        emission = distance * tonnage * EMISSIONS[emission_mode]
         emissions.append(emission)
     
     logistics_scores = inverse_normalizer(emissions)
@@ -96,11 +110,19 @@ def calculate_logistics_score(destination_lat, destination_lon, tonnage: float, 
     
     return results
 
-def calculate_final_scores(destination_lat, destination_lon, weights):
+def calculate_final_scores(destination_lat, destination_lon, tonnage, weights):
+
+    if weights is None:
+        weights = {"cost": 0.25, "risk": 0.25, "co2": 0.25, "logistics": 0.25}
+    else:
+        total = sum(weights.values())
+        if total > 0:
+            weights = {k: v / total for k, v in weights.items()}
+
     cost_scores = calculate_cost_scores()
     risk_scores = calculate_risk_scores()
     co2_scores = calculate_co2_scores()
-    logistics_scores = calculate_logistics_score(destination_lat, destination_lon)
+    logistics_scores = calculate_logistics_score(destination_lat, destination_lon, tonnage)
     results = []
 
     for company in SUPPLIERS:

@@ -1,8 +1,7 @@
-// src/App.tsx
-import { useState } from 'react'
-import { LandingPage } from './landingpage'
-import { Navbar } from './components/navbar'
-import './App.css'
+import { useState } from "react";
+import { LandingPage } from "./landingpage";
+import { Navbar } from "./components/navbar";
+import "./App.css";
 
 function App() {
   const [screen, setScreen] = useState<'landing' | 'recommendations'>('landing')
@@ -24,7 +23,7 @@ function App() {
         )}
       </main>
     </div>
-  )  
+  );
 }
 
-export default App
+export default App;

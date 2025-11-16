@@ -1,9 +1,9 @@
 async function geocode(location: string) {
-  const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
-    location
-  )}`;
-
-  const res = await fetch(url);
+  const res = await fetch(
+    `${import.meta.env.VITE_BACKEND_URL}/geocode?q=${encodeURIComponent(
+      location
+    )}`
+  );
   const data = await res.json();
 
   if (!data || data.length == 0) {
@@ -11,9 +11,9 @@ async function geocode(location: string) {
   }
 
   return {
-    lat: parseFloat(data[0].lat),
-    lon: parseFloat(data[0].lon),
-    displayName: data[0].display_name,
+    lat: data.lat,
+    lon: data.lon,
+    displayName: data.display_name,
   };
 }
 
