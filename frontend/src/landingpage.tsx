@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import geocode from "./util/geocode";
 import optimizeRequest from "./util/optimize";
+import { CitySelect } from "./components/CitySelect";
+import type { CityResult } from "./api/geodb";
 
 export function LandingPage() {
   const [priority, setPriority] = useState("cost");
   const [location, setLocation] = useState("");
   const [volume, setVolume] = useState("");
+  const [destination, setDestination] = useState<CityResult | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,8 +61,6 @@ export function LandingPage() {
           value={destination}
           onChange={setDestination}
           placeholder="e.g., Chicago, IL"
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
           className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#67C28A] focus:outline-none"
         />
 
@@ -73,12 +74,11 @@ export function LandingPage() {
           className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#67C28A] focus:outline-none"
         >
           <option value="">Select volume</option>
-          <option>1–50 tons</option>  
+          <option>1–50 tons</option>
           <option>50–250 tons</option>
           <option>250–1000 tons</option>
           <option>1000+ tons</option>
         </select>
-
 
         {/* Priority */}
         <label className="block text-left font-medium mb-3 text-gray-700">
