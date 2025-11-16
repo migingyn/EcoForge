@@ -1,0 +1,1846 @@
+{
+	"HBIS Group": {
+		"plants": [
+			{
+				"plant_name": "HBIS Laoting Iron & Steel Co., Ltd. (Tangshan New District, Tangshan, Hebei)",
+				"location": {
+					"city": "Tangshan",
+					"province": "Hebei",
+					"country": "China",
+					"latitude": "39.257823",
+					"longitude": "119.033567,",
+					"google_maps_link": "https://maps.google.com/?q=39.257823,119.033567"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2020",
+					"major_modernizations": "Phase I (BFs and BOFs, completed ~2022) and Phase II (EAFs and new BOFs, begun 2021)",
+					"last_upgrade_year": "2024"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF (with EAF operations)",
+					"coke_ovens": "Yes (supporting BF-BOF)",
+					"sinter_plant": "Yes (two 360m² machines)",
+					"pelletizer": "Yes (belt pelletizing machines)",
+					"scrap_share_pct": "No verified data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "High (primarily BF-produced)",
+					"eaf_mva_rating": "No verified data",
+					"bf_capacity_tpd": "No verified data",
+					"furnace_size_tons_per_tap": "No verified data",
+					"rolling_mill_types": [
+						"hot strip mill",
+						"bar mill",
+						"wire rod mill",
+						"section mill",
+						"plate mill"
+					]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data",
+					"methodology_notes": "Company-level EI used if needed; not available for plant"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "2.0 (million tonnes, initial phase)",
+					"rolling_capacity_mty": "No verified data",
+					"utilization_rate_pct": "No verified data",
+					"feedstock_sources": "Iron ore, sinter, pellets, scrap (for EAF feed)"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Nearby coastal port (Tangshan port ~80km)",
+					"nearest_major_port": "Tianjin Port (~120 km)",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Provincial grid (Hebei) and onsite gas-CCHP",
+					"renewable_share_pct": "No verified data",
+					"energy_mix_breakdown": "Primarily coal-based grid; some waste gas power generation",
+					"green_steel_initiatives": "Hydrogen DRI demonstration (Zhangjiakou project)",
+					"hydrogen_dri_projects": "HBIS Zhangxuan (Zhangjiakou) using hydrogen-rich gas",
+					"carbon_capture_status": "No verified data",
+					"emissions_targets": {
+						"2030_target": "Carbon peak by 2030 (company goal)",
+						"2050_target": "Carbon neutrality by 2060 (national goal)"
+					}
+				},
+				"risk_factors": {
+					"market_risk": "Demand fluctuations, global oversupply pressure",
+					"operational_risk": "Resource price volatility, aging blast furnaces",
+					"labor_risk": "Aging workforce, safety in heavy industry",
+					"geographic_climate_risk": "Air pollution constraints in Hebei, water scarcity in region",
+					"political_regulatory_risk": "Stringent emissions regulations in Hebei"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0 (ton CO₂/ton steel, estimate)",
+					"default_logistics_mode": "rail",
+					"red_flags": "High coal reliance, major expansion (EAF introduction) may change emissions"
+				}
+			},
+			{
+				"plant_name": "HBIS Wugang Special Plate Co., Ltd. (Wugang, Henan)",
+				"location": {
+					"city": "Wugang",
+					"province": "Henan",
+					"country": "China",
+					"latitude": "33.29500",
+					"longitude": "113.52694",
+					"google_maps_link": "https://maps.google.com/?q=33.29500,113.52694"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "1970",
+					"major_modernizations": "Multiple upgrades (e.g. heat treatment lines, new casters)",
+					"last_upgrade_year": "No verified data"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF (special steel plate) with some EAF capacity",
+					"coke_ovens": "Yes (supports blast furnace)",
+					"sinter_plant": "Yes",
+					"pelletizer": "Yes",
+					"scrap_share_pct": "No verified data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100% (BF-produced)",
+					"eaf_mva_rating": "No verified data",
+					"bf_capacity_tpd": "Estimated ~3000-4000 (for 1260m³ BF)",
+					"furnace_size_tons_per_tap": "No verified data",
+					"rolling_mill_types": [
+						"wide plate rolling mill (4200mm)",
+						"heavy plate mill",
+						"medium plate"
+					]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data",
+					"methodology_notes": "No plant data; use China BF-BOF avg ~2.0 tCO₂/t steel"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "5.0",
+					"rolling_capacity_mty": "3.0 (wide plate, heavy plate)",
+					"utilization_rate_pct": "No verified data"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes (G107 nearby)",
+					"ports_waterways_access": "No direct port (interior); nearest major port Tianjin",
+					"nearest_major_port": "Tianjin Port (~500 km)",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Provincial grid (Henan); captive CHP gas units",
+					"renewable_share_pct": "No verified data",
+					"energy_mix_breakdown": "Grid (mainly coal), some natural gas power generation",
+					"green_steel_initiatives": "None reported",
+					"hydrogen_dri_projects": "None reported at this plant",
+					"carbon_capture_status": "None",
+					"emissions_targets": {
+						"2030_target": "Carbon peak by 2030",
+						"2050_target": "Carbon neutrality by 2060 (national policy)"
+					}
+				},
+				"risk_factors": {
+					"market_risk": "Cyclical demand for heavy plates, competition",
+					"operational_risk": "Major heavy equipment maintenance, high energy use",
+					"labor_risk": "No recent strikes reported",
+					"geographic_climate_risk": "Henan has moderate water stress; stricter local emissions controls",
+					"political_regulatory_risk": "Increasing climate regulation; part of central steel cuts policy"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0 (ton CO₂/ton steel, BF average)",
+					"default_logistics_mode": "rail",
+					"red_flags": "Specialty plates facility with potential high energy intensity"
+				}
+			},
+			{
+				"plant_name": "HBIS Shijiazhuang Iron & Steel Co., Ltd. Special Steel Branch (Jingxing Mining Area, Shijiazhuang, Hebei)",
+				"location": {
+					"city": "Shijiazhuang",
+					"province": "Hebei",
+					"country": "China",
+					"latitude": "38.075008",
+					"longitude": "114.033043",
+					"google_maps_link": "https://maps.google.com/?q=38.075008,114.033043"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2020",
+					"major_modernizations": "New short-process EAF plant built (2020)",
+					"last_upgrade_year": "No verified data"
+				},
+				"steelmaking_process": {
+					"primary_route": "EAF (100% scrap short-process)",
+					"coke_ovens": "No (EAF only)",
+					"sinter_plant": "No",
+					"pelletizer": "No",
+					"scrap_share_pct": "100%",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "0%",
+					"eaf_mva_rating": "Not available",
+					"bf_capacity_tpd": "0",
+					"furnace_size_tons_per_tap": "No BOFs",
+					"rolling_mill_types": [
+						"bar and wire rod mill",
+						"medium section mill"
+					]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data",
+					"methodology_notes": "Short-route steel (electricity intensity) used as approximation"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "5.0 (steel plates/specialty rods)",
+					"rolling_capacity_mty": "No verified data",
+					"utilization_rate_pct": "No verified data",
+					"feedstock_sources": "100% scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "No direct port (inland)",
+					"nearest_major_port": "Tianjin",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Provincial grid (Hebei)",
+					"renewable_share_pct": "No verified data",
+					"energy_mix_breakdown": "Grid (coal-dominated mix)",
+					"green_steel_initiatives": "Fully electric arc (scrap) route, considered lower-carbon than BF",
+					"hydrogen_dri_projects": "No (electric steel only)",
+					"carbon_capture_status": "None",
+					"emissions_targets": {
+						"2030_target": "Peak CO₂ by 2030 (national)",
+						"2050_target": "Neutrality by 2060 (national)"
+					}
+				},
+				"risk_factors": {
+					"market_risk": "Market volatility for specialty steel",
+					"operational_risk": "Electric supply stability (grid dependence)",
+					"labor_risk": "No specific data",
+					"geographic_climate_risk": "Air quality regulations in Hebei",
+					"political_regulatory_risk": "Favors clean tech; EAF aligns with policies"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "1.2 (ton CO₂/ton steel, estimate for EAF)",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Hebei Zhangxuan High Tech Co., Ltd. (Xuanhua District, Zhangjiakou, Hebei)",
+				"location": {
+					"city": "Zhangjiakou",
+					"province": "Hebei",
+					"country": "China",
+					"latitude": "40.607977",
+					"longitude": "115.067516",
+					"google_maps_link": "https://maps.google.com/?q=40.607977,115.067516"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2023",
+					"major_modernizations": "New DRI-EAF hydrogen-based facility (2023)",
+					"last_upgrade_year": "2023"
+				},
+				"steelmaking_process": {
+					"primary_route": "DRI-EAF (hydrogen-rich gas)",
+					"coke_ovens": "No",
+					"sinter_plant": "No",
+					"pelletizer": "No",
+					"scrap_share_pct": "No verified data",
+					"dri_share_pct": "60% H₂-based DRI",
+					"hot_metal_share_pct": "0%",
+					"eaf_mva_rating": "No verified data",
+					"bf_capacity_tpd": "0",
+					"furnace_size_tons_per_tap": "EAF size not specified",
+					"rolling_mill_types": ["wire rod", "bar"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data",
+					"methodology_notes": "Includes hydrogen DRI (low-carbon input); emissions ~0.5-1.0 tCO₂/t steel"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "0.6",
+					"rolling_capacity_mty": "No verified data",
+					"utilization_rate_pct": "No verified data",
+					"feedstock_sources": "Iron ore (hydrogen DRI) and some scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "No",
+					"nearest_major_port": "Tianjin",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Provincial grid (Beijing-Shijiazhuang grid)",
+					"renewable_share_pct": "Potentially high (hydrogen from water electrolysis planned)",
+					"energy_mix_breakdown": "Grid (mix of hydro/nuclear/coal)",
+					"green_steel_initiatives": "Pioneering hydrogen-rich gas DRI",
+					"hydrogen_dri_projects": "Two 555,000-ton hydrogen reduction furnaces (2023)",
+					"carbon_capture_status": "None reported",
+					"emissions_targets": {
+						"2030_target": "Peak CO₂ by 2030",
+						"2050_target": "Carbon neutral by 2060"
+					}
+				},
+				"risk_factors": {
+					"market_risk": "High-tech pilot project risk, H₂ cost volatility",
+					"operational_risk": "New technology scale-up challenges",
+					"labor_risk": "Requires specialized skills for H₂ systems",
+					"geographic_climate_risk": "Zhangjiakou cold climate (high heating demand)",
+					"political_regulatory_risk": "Central support for hydrogen projects (positive)"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "1.0 (ton CO₂/ton steel, low-carbon process)",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Hangang Longshan Iron & Steel Co., Ltd. (Shexian County, Handan, Hebei)",
+				"location": {
+					"city": "Shexian (Handan)",
+					"province": "Hebei",
+					"country": "China",
+					"latitude": "36.630000",
+					"longitude": "114.540000",
+					"google_maps_link": "https://maps.google.com/?q=36.630000,114.540000"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2022",
+					"major_modernizations": "Relocated from Handan plant (Dec 2022)",
+					"last_upgrade_year": "2022"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+					"pelletizer": "Yes",
+					"scrap_share_pct": "No verified data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "No verified data",
+					"bf_capacity_tpd": "No verified data",
+					"furnace_size_tons_per_tap": "No verified data",
+					"rolling_mill_types": ["long products", "wire rod"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data",
+					"methodology_notes": "Assume typical BF-BOF intensity ~2.0 tCO₂/t"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "12.0 (merged with Benxi, 2020 est)",
+					"rolling_capacity_mty": "No verified data",
+					"utilization_rate_pct": "No verified data",
+					"feedstock_sources": "Iron ore, pellets, scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "No",
+					"nearest_major_port": "Tianjin",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Provincial grid (Hebei)",
+					"renewable_share_pct": "No verified data",
+					"energy_mix_breakdown": "Grid (coal, wind, solar mix)",
+					"green_steel_initiatives": "None reported",
+					"hydrogen_dri_projects": "None",
+					"carbon_capture_status": "None reported",
+					"emissions_targets": {
+						"2030_target": "Peak CO₂",
+						"2050_target": "Carbon neutrality (2060)"
+					}
+				},
+				"risk_factors": {
+					"market_risk": "Overcapacity risk",
+					"operational_risk": "Integration issues from relocation",
+					"labor_risk": "Skilled labor shortage in new location",
+					"geographic_climate_risk": "Air quality controls in Hebei",
+					"political_regulatory_risk": "Strict emissions enforcement"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0 (ton CO₂/ton steel)",
+					"default_logistics_mode": "rail"
+				}
+			}
+		]
+	},
+	"Bengang Steel Plates": {
+		"plants": [
+			{
+				"plant_name": "Bengang Steel Plates Co., Ltd. (Benxi, Liaoning)",
+				"location": {
+					"city": "Benxi",
+					"province": "Liaoning",
+					"country": "China",
+					"latitude": "41.274132",
+					"longitude": "123.722099",
+					"google_maps_link": "https://maps.google.com/?q=41.274132,123.722099"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "1997",
+					"major_modernizations": "New BF6 (2004), BF7 relined (2024)",
+					"last_upgrade_year": "2024"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF (with some EAF)",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+					"scrap_share_pct": "No verified data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "No verified data",
+					"bf_capacity_tpd": "No verified data",
+					"furnace_size_tons_per_tap": "180 (BOFs)",
+					"rolling_mill_types": [
+						"heavy plate mill",
+						"bar",
+						"wire rod",
+						"cold rolling mill"
+					]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data",
+					"methodology_notes": "Assume China BF-BOF average ~2.0 tCO₂/t"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "12.4",
+					"rolling_capacity_mty": "No verified data",
+					"utilization_rate_pct": "91% (2023 est)",
+					"feedstock_sources": "Iron ore, coke, scrap (for small EAF share)"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Tieshan Port (Dalian) ~100 km",
+					"nearest_major_port": "Dalian Port (~100 km)",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Self-generated (coal CHP), grid",
+					"renewable_share_pct": "No verified data",
+					"energy_mix_breakdown": "Coal-fired CHP, grid (coal-heavy)",
+					"green_steel_initiatives": "EAF pilot lines (2022)",
+					"hydrogen_dri_projects": "None reported",
+					"carbon_capture_status": "None reported",
+					"emissions_targets": {
+						"2030_target": "Peak CO₂",
+						"2050_target": "Carbon neutral by 2060"
+					}
+				},
+				"risk_factors": {
+					"market_risk": "Slowing steel demand",
+					"operational_risk": "Aging BF infrastructure",
+					"labor_risk": "Regional labor shortages",
+					"geographic_climate_risk": "High air pollution controls in Liaoning",
+					"political_regulatory_risk": "Provincial consolidation of steel industry"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0 (ton CO₂/ton steel)",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Benxi Beiying Iron & Steel Group Co., Ltd. (Beitai, Benxi, Liaoning)",
+				"location": {
+					"city": "Benxi",
+					"province": "Liaoning",
+					"country": "China",
+					"latitude": "41.224814",
+					"longitude": "123.608374",
+					"google_maps_link": "https://maps.google.com/?q=41.224814,123.608374"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2002",
+					"major_modernizations": "Section 1 capacity replacement (2023)",
+					"last_upgrade_year": "2023"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+					"scrap_share_pct": "0%",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No verified data",
+					"furnace_size_tons_per_tap": "150 (BOF)",
+					"rolling_mill_types": [
+						"long products mill",
+						"wire rod mill"
+					]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data",
+					"methodology_notes": "Use BF-BOF average (≈2.0 tCO₂/t)"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "3.6 (2021)",
+					"rolling_capacity_mty": "No verified data",
+					"utilization_rate_pct": "No verified data",
+					"feedstock_sources": "Iron ore, coal, coke"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Dalian Port (~100 km)",
+					"nearest_major_port": "Dalian",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid power",
+					"renewable_share_pct": "No verified data",
+					"energy_mix_breakdown": "Grid (coal-dominated)",
+					"green_steel_initiatives": "None reported",
+					"emissions_targets": {
+						"2030_target": "Peak CO₂",
+						"2050_target": "Carbon neutrality"
+					}
+				},
+				"risk_factors": {
+					"market_risk": "Integration with Bengang (Angang merger)",
+					"operational_risk": "Outdated BF tech",
+					"labor_risk": "Aging workforce",
+					"geographic_climate_risk": "Liaoning industrial limits",
+					"political_regulatory_risk": "Provincial steel policy changes"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0 (ton CO₂/ton steel)",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Benxi Iron & Steel Group (Bengang) Integrated Plant (Pingshan, Benxi, Liaoning)",
+				"location": {
+					"city": "Benxi",
+					"province": "Liaoning",
+					"country": "China",
+					"latitude": "41.276000",
+					"longitude": "123.720000",
+					"google_maps_link": "https://maps.google.com/?q=41.276000,123.720000"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "1960s (original furnaces)",
+					"major_modernizations": "Merged into Bengang (2010); several BF upgrades",
+					"last_upgrade_year": "No verified data"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+					"pelletizer": "Yes",
+					"scrap_share_pct": "Low",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "No",
+					"bf_capacity_tpd": "No verified data",
+					"furnace_size_tons_per_tap": "No verified data",
+					"rolling_mill_types": [
+						"sheet mill",
+						"slab mill",
+						"long product mill"
+					]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data",
+					"methodology_notes": "Follow BF-BOF intensity in Liaoning (~2.0 tCO₂/t)"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "13.0 (total group)",
+					"rolling_capacity_mty": "No verified data",
+					"utilization_rate_pct": "No verified data",
+					"feedstock_sources": "Iron ore, coke"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Port of Dalian",
+					"nearest_major_port": "Dalian",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Provincial grid; small cogeneration",
+					"renewable_share_pct": "No verified data",
+					"energy_mix_breakdown": "Coal-dominated",
+					"green_steel_initiatives": "None reported",
+					"emissions_targets": {
+						"2030_target": "Peak CO₂",
+						"2050_target": "Neutrality by 2060"
+					}
+				},
+				"risk_factors": {
+					"market_risk": "Reorganization with Angang increases uncertainty",
+					"operational_risk": "Aging equipment, need upgrades",
+					"labor_risk": "Standard unionized workforce",
+					"geographic_climate_risk": "Regional emission caps",
+					"political_regulatory_risk": "Owned by Liaoning SASAC, subject to state policy"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0 (ton CO₂/ton steel)",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Benxi Beitai Iron Ore Mine and Pellets (Benxi, Liaoning)",
+				"location": {
+					"city": "Benxi",
+					"province": "Liaoning",
+					"country": "China",
+					"latitude": "41.267000",
+					"longitude": "123.730000",
+					"google_maps_link": "https://maps.google.com/?q=41.267000,123.730000"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "No verified data",
+					"major_modernizations": "No verified data",
+					"last_upgrade_year": "No verified data"
+				},
+				"steelmaking_process": {
+					"primary_route": "Iron ore mining and pelletizing",
+					"coke_ovens": "N/A",
+					"sinter_plant": "No",
+					"pelletizer": "Yes (pellet plant on site)",
+					"scrap_share_pct": "0%",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "0%",
+					"eaf_mva_rating": "N/A",
+					"bf_capacity_tpd": "N/A",
+					"furnace_size_tons_per_tap": "N/A"
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "N/A",
+					"rolling_capacity_mty": "N/A",
+					"utilization_rate_pct": "N/A",
+					"feedstock_sources": "N/A"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail"],
+					"onsite_rail": "Yes",
+					"highway_access": "Limited",
+					"ports_waterways_access": "No",
+					"nearest_major_port": "Dalian",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "No verified data",
+					"renewable_share_pct": "No verified data"
+				},
+				"risk_factors": {
+					"market_risk": "Commodity price volatility (iron ore)",
+					"operational_risk": "Ore quality issues",
+					"labor_risk": "Standard mining labor issues",
+					"geographic_climate_risk": "Flood risk (mining region)",
+					"political_regulatory_risk": "Mining regulations"
+				},
+				"modeling_recommendations": {
+					"default_logistics_mode": "rail"
+				}
+			}
+		]
+	},
+	"Angang Steel Company": {
+		"plants": [
+			{
+				"plant_name": "Angang Steel Co., Ltd. (Anshan, Liaoning)",
+				"location": {
+					"city": "Anshan",
+					"province": "Liaoning",
+					"country": "China",
+					"latitude": "41.148267",
+					"longitude": "122.983054",
+					"google_maps_link": "https://maps.google.com/?q=41.148267,122.983054"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "1998",
+					"major_modernizations": "Wind power CCPP (2006)",
+					"last_upgrade_year": "2024-07 (new rolling line)"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+					"pelletizer": "Yes",
+					"scrap_share_pct": "No verified data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "Unknown",
+					"furnace_size_tons_per_tap": "150 (BOF)",
+					"rolling_mill_types": [
+						"hot rolling (sheet)",
+						"wire rod",
+						"cold rolling"
+					]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data",
+					"methodology_notes": "Chinese BF-BOF average"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "21.7",
+					"rolling_capacity_mty": "No verified data",
+					"utilization_rate_pct": "No verified data",
+					"feedstock_sources": "Imported ore, domestic ore, scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Qinhuangdao Port (nearby)",
+					"nearest_major_port": "Qinhuangdao Port",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid (Liaoning)",
+					"renewable_share_pct": "No verified data",
+					"energy_mix_breakdown": "Grid (coal-heavy)",
+					"green_steel_initiatives": "Wind power CCPP pioneered",
+					"hydrogen_dri_projects": "None reported",
+					"carbon_capture_status": "None",
+					"emissions_targets": {
+						"2030_target": "Peak CO₂",
+						"2050_target": "Neutrality (2060)"
+					}
+				},
+				"risk_factors": {
+					"market_risk": "Overcapacity issues",
+					"operational_risk": "Industrial accidents",
+					"labor_risk": "Unionized workforce stability",
+					"geographic_climate_risk": "Seasonal smog controls",
+					"political_regulatory_risk": "Tight environmental fines"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0 (ton CO₂/ton steel)",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Benxi Iron & Steel (Angang-Shougang joint venture, Anshan, Liaoning)",
+				"location": {
+					"city": "Anshan",
+					"province": "Liaoning",
+					"country": "China",
+					"latitude": "41.150000",
+					"longitude": "122.970000",
+					"google_maps_link": "https://maps.google.com/?q=41.150000,122.970000"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2011",
+					"major_modernizations": "Modern scrap EAF line (2014)",
+					"last_upgrade_year": "2019"
+				},
+				"steelmaking_process": {
+					"primary_route": "EAF (scrap steel plant)",
+					"coke_ovens": "No",
+					"sinter_plant": "No",
+					"pelletizer": "No",
+					"scrap_share_pct": "100%",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "0%",
+					"eaf_mva_rating": "No data",
+					"bf_capacity_tpd": "0",
+					"furnace_size_tons_per_tap": "No BF",
+					"rolling_mill_types": ["rebars", "wire rod", "light rail"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data",
+					"methodology_notes": "EAF scrap plant ~0.5 tCO₂/t"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "5.4 (Angang-Shougang)",
+					"rolling_capacity_mty": "No verified data",
+					"utilization_rate_pct": "No verified data",
+					"feedstock_sources": "100% scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "N/A",
+					"nearest_major_port": "Qinhuangdao",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No verified data",
+					"energy_mix_breakdown": "Grid",
+					"green_steel_initiatives": "All-electric process",
+					"hydrogen_dri_projects": "No",
+					"carbon_capture_status": "No",
+					"emissions_targets": {
+						"2030_target": "Peak CO₂",
+						"2050_target": "Neutrality"
+					}
+				},
+				"risk_factors": {
+					"market_risk": "Scrap steel price volatility",
+					"operational_risk": "Lower barriers than BF",
+					"labor_risk": "Moderate (less heavy work)",
+					"geographic_climate_risk": "Local air control",
+					"political_regulatory_risk": "Favorable (EAF encouraged)"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "0.6 (ton CO₂/ton steel)",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Tangshan Iron & Steel Group (Tanggang, Hebei)",
+				"location": {
+					"city": "Tangshan",
+					"province": "Hebei",
+					"country": "China",
+					"latitude": "39.648587",
+					"longitude": "118.212487",
+					"google_maps_link": "https://maps.google.com/?q=39.648587,118.212487"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "1943",
+					"major_modernizations": "Relocated to Laoting (2020)",
+					"last_upgrade_year": "2020"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF (old site, now retired)",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+					"pelletizer": "Yes",
+					"scrap_share_pct": "0%",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "6000+",
+					"furnace_size_tons_per_tap": "Unknown",
+					"rolling_mill_types": ["sheet", "plate", "wire", "tube"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "Retired",
+					"scope_1": "0",
+					"scope_2": "0",
+					"scope_3": "0",
+					"methodology_notes": "Old plant closed; new plant separate (see HBIS Laoting)"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "6.84 (retired)",
+					"rolling_capacity_mty": "No verified data",
+					"utilization_rate_pct": "N/A",
+					"feedstock_sources": "Imported and domestic iron ore"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Tangshan port",
+					"nearest_major_port": "Tangshan Port",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No",
+					"energy_mix_breakdown": "Grid (coal)",
+					"green_steel_initiatives": "New plant planned",
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "Outdated plant, lost competitiveness",
+					"operational_risk": "Shut down 2020",
+					"labor_risk": "Factory closure impact",
+					"geographic_climate_risk": "Hebei environment restrictions",
+					"political_regulatory_risk": "Closure mandated by policy"
+				},
+				"modeling_recommendations": {
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Fushun Iron and Steel (Anshan Group, Liaoning)",
+				"location": {
+					"city": "Fushun",
+					"province": "Liaoning",
+					"country": "China",
+					"latitude": "41.873900",
+					"longitude": "123.886800",
+					"google_maps_link": "https://maps.google.com/?q=41.873900,123.886800"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "No verified data",
+					"major_modernizations": "No verified data",
+					"last_upgrade_year": "No verified data"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+
+					"scrap_share_pct": "No verified data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No verified data",
+					"furnace_size_tons_per_tap": "180 (BOF)",
+					"rolling_mill_types": ["wire rod", "bar"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "2.5",
+					"rolling_capacity_mty": "No verified data",
+					"utilization_rate_pct": "No verified data",
+					"feedstock_sources": "Iron ore, coking coal, scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "No",
+					"nearest_major_port": "Dalian",
+					"typical_shipping_radius_km": "No verified data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No verified data",
+					"energy_mix_breakdown": "Grid (coal)",
+					"green_steel_initiatives": "None reported",
+
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "Small plant, local demand limited",
+					"operational_risk": "Aging equipment",
+					"labor_risk": "No data",
+					"geographic_climate_risk": "Likely low (outside smog hotspots)",
+					"political_regulatory_risk": "Provincial consolidation pressure"
+				},
+				"modeling_recommendations": {
+					"default_logistics_mode": "rail"
+				}
+			}
+		]
+	},
+	"Beijing Shougang Group": {
+		"plants": [
+			{
+				"plant_name": "Shougang Jingtang Iron & Steel Co., Ltd. (Caofeidian, Hebei)",
+				"location": {
+					"city": "Tangshan",
+					"province": "Hebei",
+					"country": "China",
+					"latitude": "39.315",
+					"longitude": "118.049",
+					"google_maps_link": "https://maps.google.com/?q=39.315,118.049"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2012",
+					"major_modernizations": "U&O (2018)",
+					"last_upgrade_year": "2018"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+					"scrap_share_pct": "Low",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No data",
+					"furnace_size_tons_per_tap": "180 (BOF)",
+					"rolling_mill_types": ["plate", "wire", "bar"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No verified data",
+					"scope_1": "No verified data",
+					"scope_2": "No verified data",
+					"scope_3": "No verified data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "12.9",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "Iron ore (imported), coke"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road", "sea"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Direct to Caofeidian Port",
+					"nearest_major_port": "Caofeidian Port",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No data",
+
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "Competition in Hebei",
+					"operational_risk": "Water use constraints",
+					"labor_risk": "No known issues",
+					"geographic_climate_risk": "Coastal flooding potential",
+					"political_regulatory_risk": "Strict Hebei pollution control"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Shougang Yangang Co., Ltd. (Beishan, Hebei)",
+				"location": {
+					"city": "Tangshan",
+					"province": "Hebei",
+					"country": "China",
+					"latitude": "39.617",
+					"longitude": "118.183",
+					"google_maps_link": "https://maps.google.com/?q=39.617,118.183"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2009",
+					"major_modernizations": "U&O (2012)",
+					"last_upgrade_year": "2015"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+
+					"scrap_share_pct": "Moderate",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No data",
+					"furnace_size_tons_per_tap": "160 (BOF)",
+					"rolling_mill_types": ["bar", "wire", "light rail"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "12.0",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "Iron ore, scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Caofeidian (via Yangang port)",
+					"nearest_major_port": "Caofeidian Port",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No data"
+				},
+				"risk_factors": {
+					"market_risk": "Heavy reliance on scrap market",
+					"operational_risk": "Pollution fines risk",
+					"labor_risk": "No data",
+					"geographic_climate_risk": "Air quality regulation",
+					"political_regulatory_risk": "Hebei environmental oversight"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Shougang Yunnan Baohua Iron & Steel Co., Ltd. (Qujing, Yunnan)",
+				"location": {
+					"city": "Qujing",
+					"province": "Yunnan",
+					"country": "China",
+					"latitude": "25.507",
+					"longitude": "103.841",
+					"google_maps_link": "https://maps.google.com/?q=25.507,103.841"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2014",
+					"major_modernizations": "U&O (2018)",
+					"last_upgrade_year": "2018"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+
+					"scrap_share_pct": "Low",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No data",
+					"furnace_size_tons_per_tap": "180 (BOF)",
+					"rolling_mill_types": ["plate", "sheet", "wire"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "2.72",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "Iron ore, pellets"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Dalian",
+					"nearest_major_port": "Beibu Gulf (Guangxi)",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid (Yunnan mix hydro-heavy)",
+					"renewable_share_pct": "Higher (Yunnan hydro)",
+
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "Provincial demand",
+					"operational_risk": "Remote location",
+					"labor_risk": "Skilled labor shortage in Yunnan",
+					"geographic_climate_risk": "Low (green grid)",
+					"political_regulatory_risk": "Local environmental oversight"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0",
+					"default_logistics_mode": "rail"
+				}
+			}
+		]
+	},
+	"Baoshan Iron & Steel": {
+		"plants": [
+			{
+				"plant_name": "Baoshan Iron & Steel Co., Ltd. (Shanghai)",
+				"location": {
+					"city": "Shanghai",
+					"province": "Shanghai",
+					"country": "China",
+					"latitude": "31.337",
+					"longitude": "121.546",
+					"google_maps_link": "https://maps.google.com/?q=31.337,121.546"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "1977",
+					"major_modernizations": "BOF upgrades (2000s)",
+					"last_upgrade_year": "2020"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+
+					"scrap_share_pct": "No data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No data",
+					"furnace_size_tons_per_tap": "150 (BOF)",
+					"rolling_mill_types": ["sheet", "long"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "31.0",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "Iron ore, pellets, scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["sea", "rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Wusongkou Port",
+					"nearest_major_port": "Wusongkou Port",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No data",
+
+					"hydrogen_dri_projects": "Pilot EAF scrap process",
+					"carbon_capture_status": "None",
+					"emissions_targets": {
+						"2030_target": "Peak CO₂",
+						"2050_target": "Neutrality"
+					}
+				},
+				"risk_factors": {
+					"market_risk": "Export-oriented steel demand",
+					"operational_risk": "Urban location constraints",
+					"labor_risk": "Large workforce",
+					"geographic_climate_risk": "Coastal flooding risk",
+					"political_regulatory_risk": "Tight local regulations"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0",
+					"default_logistics_mode": "sea"
+				}
+			},
+			{
+				"plant_name": "Baoshan Iron & Steel (Qingdao) Co., Ltd.",
+				"location": {
+					"city": "Qingdao",
+					"province": "Shandong",
+					"country": "China",
+					"latitude": "36.081",
+					"longitude": "120.313",
+					"google_maps_link": "https://maps.google.com/?q=36.081,120.313"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2008",
+					"major_modernizations": "No data",
+					"last_upgrade_year": "No data"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+
+					"scrap_share_pct": "No data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No data",
+					"furnace_size_tons_per_tap": "180 (BOF)",
+					"rolling_mill_types": ["wire", "bar", "special sections"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "12.0",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "Iron ore, local scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["sea", "rail"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Qingdao Port",
+					"nearest_major_port": "Qingdao Port",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No data"
+				},
+				"risk_factors": {
+					"market_risk": "Regional competition",
+					"operational_risk": "Pollution in industrial cluster",
+					"labor_risk": "No data",
+					"geographic_climate_risk": "Coastal typhoon risk",
+					"political_regulatory_risk": "Shandong environmental policy"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0",
+					"default_logistics_mode": "sea"
+				}
+			},
+			{
+				"plant_name": "Baoshan Iron & Steel (Zhanjiang) Co., Ltd.",
+				"location": {
+					"city": "Zhanjiang",
+					"province": "Guangdong",
+					"country": "China",
+					"latitude": "21.218",
+					"longitude": "110.462",
+					"google_maps_link": "https://maps.google.com/?q=21.218,110.462"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2009",
+					"major_modernizations": "No data",
+					"last_upgrade_year": "No data"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+
+					"scrap_share_pct": "No data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No data",
+					"furnace_size_tons_per_tap": "180 (BOF)",
+					"rolling_mill_types": ["bar", "wire", "hot strip"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "17.0",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "Iron ore (imported), pellets"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "sea"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Zhanjiang Port",
+					"nearest_major_port": "Zhanjiang Port",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No data",
+
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "Southeast China demand",
+					"operational_risk": "Subtropical climate effects",
+					"labor_risk": "No data",
+					"geographic_climate_risk": "Typhoon risk",
+					"political_regulatory_risk": "Guangdong environmental policy"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Baoshan Iron & Steel (Chongqing) Co., Ltd.",
+				"location": {
+					"city": "Chongqing",
+					"province": "Chongqing",
+					"country": "China",
+					"latitude": "29.727",
+					"longitude": "106.556",
+					"google_maps_link": "https://maps.google.com/?q=29.727,106.556"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2012",
+					"major_modernizations": "U&O (2018)",
+					"last_upgrade_year": "2018"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+
+					"scrap_share_pct": "No data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No data",
+					"furnace_size_tons_per_tap": "150 (BOF)",
+					"rolling_mill_types": ["wire rod", "bar"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "6.5",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "Iron ore, coal"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Yangtze river transport",
+					"nearest_major_port": "Nanjing Port (via Yangtze)",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid (hydro-dominated Sichuan grid)",
+					"renewable_share_pct": "Higher (~40%)",
+
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "Inland transport costs",
+					"operational_risk": "High humidity (roller corrosion)",
+					"labor_risk": "No data",
+					"geographic_climate_risk": "Long rainy season",
+					"political_regulatory_risk": "Chongqing industrial policy"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0",
+					"default_logistics_mode": "rail"
+				}
+			}
+		]
+	},
+	"Nanjing Iron & Steel": {
+		"plants": [
+			{
+				"plant_name": "Nanjing Iron & Steel Co., Ltd. (Nanjing, Jiangsu)",
+				"location": {
+					"city": "Nanjing",
+					"province": "Jiangsu",
+					"country": "China",
+					"latitude": "32.042",
+					"longitude": "118.834",
+					"google_maps_link": "https://maps.google.com/?q=32.042,118.834"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "1958",
+					"major_modernizations": "U&O (1990s)",
+					"last_upgrade_year": "2010s"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+
+					"scrap_share_pct": "10%",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "90%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No data",
+					"furnace_size_tons_per_tap": "180 (BOF)",
+					"rolling_mill_types": [
+						"long products",
+						"wire",
+						"special steel"
+					]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "5.6",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "Iron ore, coal, scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["road", "water"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Yangtze River (downstream)",
+					"nearest_major_port": "Nanjing Port",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No data",
+
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "Competition with coastal mills",
+					"operational_risk": "Aging equipment",
+					"labor_risk": "Skilled labor in short supply",
+					"geographic_climate_risk": "Flood control on Yangtze",
+					"political_regulatory_risk": "Jiangsu emission policies"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0",
+					"default_logistics_mode": "road"
+				}
+			},
+			{
+				"plant_name": "NISCO Jinan Special Steel Co., Ltd. (Jinan, Shandong)",
+				"location": {
+					"city": "Jinan",
+					"province": "Shandong",
+					"country": "China",
+					"latitude": "36.713",
+					"longitude": "116.998",
+					"google_maps_link": "https://maps.google.com/?q=36.713,116.998"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2007",
+					"major_modernizations": "No data",
+					"last_upgrade_year": "No data"
+				},
+				"steelmaking_process": {
+					"primary_route": "EAF (special steel)",
+					"coke_ovens": "No",
+					"sinter_plant": "No",
+					"pelletizer": "No",
+					"scrap_share_pct": "100%",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "0%",
+					"eaf_mva_rating": "No data",
+					"bf_capacity_tpd": "0",
+					"furnace_size_tons_per_tap": "No",
+					"rolling_mill_types": ["specialty bar", "wire"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "1.0",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "100% scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "No",
+					"nearest_major_port": "Qingdao",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No data",
+					"green_steel_initiatives": "All-electric scrap process",
+
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "Specialty steel niche market",
+					"operational_risk": "Less risk than BF",
+					"labor_risk": "Skilled labor needed",
+					"geographic_climate_risk": "No data",
+					"political_regulatory_risk": "Pro-scrap policy"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "0.6",
+					"default_logistics_mode": "road"
+				}
+			},
+			{
+				"plant_name": "NISCO Chongqing Special Steel Co., Ltd. (Chongqing)",
+				"location": {
+					"city": "Chongqing",
+					"province": "Chongqing",
+					"country": "China",
+					"latitude": "29.726",
+					"longitude": "106.565",
+					"google_maps_link": "https://maps.google.com/?q=29.726,106.565"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2012",
+					"major_modernizations": "No data",
+					"last_upgrade_year": "No data"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF (plate mill)",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+
+					"scrap_share_pct": "10%",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "90%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No data",
+					"furnace_size_tons_per_tap": "150 (BOF)",
+					"rolling_mill_types": ["heavy plate", "wire", "bar"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "4.2",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "Iron ore, scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road", "water"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Yangtze River",
+					"nearest_major_port": "Beibu Gulf (via Yangtze)",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid (mostly coal)",
+					"renewable_share_pct": "No data",
+
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "Regional oversupply risk",
+					"operational_risk": "Logistics complexity (inland)",
+					"labor_risk": "No data",
+					"geographic_climate_risk": "No data",
+					"political_regulatory_risk": "Local emission standards"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "NISCO North Special Steel Co., Ltd. (Yekou, Liaoning)",
+				"location": {
+					"city": "Fuxin",
+					"province": "Liaoning",
+					"country": "China",
+					"latitude": "42.013",
+					"longitude": "121.631",
+					"google_maps_link": "https://maps.google.com/?q=42.013,121.631"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "2015",
+					"major_modernizations": "No data",
+					"last_upgrade_year": "No data"
+				},
+				"steelmaking_process": {
+					"primary_route": "EAF (special steel)",
+					"coke_ovens": "No",
+					"sinter_plant": "No",
+					"pelletizer": "No",
+					"scrap_share_pct": "100%",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "0%",
+					"eaf_mva_rating": "No data",
+					"bf_capacity_tpd": "0",
+					"furnace_size_tons_per_tap": "No",
+					"rolling_mill_types": ["wire rod", "bar"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "0.5",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "100% scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Dalian",
+					"nearest_major_port": "Dalian",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid (Liaoning)",
+					"renewable_share_pct": "No data",
+					"green_steel_initiatives": "All-electric process",
+
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "Small scale market",
+					"operational_risk": "Technology reliability",
+					"labor_risk": "No data",
+					"geographic_climate_risk": "No data",
+					"political_regulatory_risk": "Pro-scrap incentives"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "0.6",
+					"default_logistics_mode": "rail"
+				}
+			}
+		]
+	},
+	"Maanshan Iron & Steel": {
+		"plants": [
+			{
+				"plant_name": "Maanshan Iron & Steel Co., Ltd. (Maanshan, Anhui)",
+				"location": {
+					"city": "Maanshan",
+					"province": "Anhui",
+					"country": "China",
+					"latitude": "31.681",
+					"longitude": "118.530",
+					"google_maps_link": "https://maps.google.com/?q=31.681,118.530"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "1958",
+					"major_modernizations": "BOF upgrade (2000s)",
+					"last_upgrade_year": "2018"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+
+					"scrap_share_pct": "No data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No data",
+					"furnace_size_tons_per_tap": "200 (BOF)",
+					"rolling_mill_types": ["rail", "long products", "wire"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "13.5",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "Iron ore, scrap"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road", "water"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "Yangtze River (wharves)",
+					"nearest_major_port": "Nanjing Port",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No data",
+
+					"hydrogen_dri_projects": "Pilot EAF scrap line",
+					"carbon_capture_status": "None",
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "East China demand",
+					"operational_risk": "Aging plant",
+					"labor_risk": "No data",
+					"geographic_climate_risk": "Flood risks",
+					"political_regulatory_risk": "Anhui industrial policy"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0",
+					"default_logistics_mode": "rail"
+				}
+			},
+			{
+				"plant_name": "Maanshan Iron & Steel Co., Ltd. (Huaibei, Anhui)",
+				"location": {
+					"city": "Huaibei",
+					"province": "Anhui",
+					"country": "China",
+					"latitude": "33.950",
+					"longitude": "116.780",
+					"google_maps_link": "https://maps.google.com/?q=33.950,116.780"
+				},
+				"commissioning_and_modernization": {
+					"year_commissioned": "1980s",
+					"major_modernizations": "No data",
+					"last_upgrade_year": "No data"
+				},
+				"steelmaking_process": {
+					"primary_route": "BF-BOF",
+					"coke_ovens": "Yes",
+					"sinter_plant": "Yes",
+
+					"scrap_share_pct": "No data",
+					"dri_share_pct": "0%",
+					"hot_metal_share_pct": "100%",
+					"eaf_mva_rating": "0",
+					"bf_capacity_tpd": "No data",
+					"furnace_size_tons_per_tap": "150 (BOF)",
+					"rolling_mill_types": ["wire", "bar"]
+				},
+				"carbon_intensity": {
+					"plant_level_co2_ton": "No data",
+					"scope_1": "No data",
+					"scope_2": "No data",
+					"scope_3": "No data"
+				},
+				"production_capacity": {
+					"crude_steel_capacity_mty": "1.0",
+					"rolling_capacity_mty": "No data",
+					"utilization_rate_pct": "No data",
+					"feedstock_sources": "Iron ore, coal"
+				},
+				"logistics_and_transport": {
+					"default_modes": ["rail", "road"],
+					"onsite_rail": "Yes",
+					"highway_access": "Yes",
+					"ports_waterways_access": "No",
+					"nearest_major_port": "Nanjing",
+					"typical_shipping_radius_km": "No data"
+				},
+				"energy_and_sustainability": {
+					"electricity_sources": "Grid",
+					"renewable_share_pct": "No data",
+
+					"emissions_targets": {}
+				},
+				"risk_factors": {
+					"market_risk": "Small regional demand",
+					"operational_risk": "High coal use",
+					"labor_risk": "No data",
+					"geographic_climate_risk": "Low (inland)",
+					"political_regulatory_risk": "No data"
+				},
+				"modeling_recommendations": {
+					"recommended_co2_intensity_value": "2.0",
+					"default_logistics_mode": "rail"
+				}
+			}
+		]
+	}
+}
