@@ -3,9 +3,19 @@ import { CitySelect } from './components/CitySelect'
 import type { CityResult } from './api/geodb'
 
 
-export function LandingPage() {
+export function LandingPage({ onFindMill }: { onFindMill: (city: string, 
+    volume: string, option: string) => void }) {
   const [priority, setPriority] = useState("cost");
+  const [volume, setVolume] = useState("");
   const [destination, setDestination] = useState<CityResult | null>(null);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (destination && volume) {
+      onFindMill(destination.city, volume, priority);
+    }
+  };
+
 
   return (
     <div className="w-full text-center">
@@ -19,7 +29,7 @@ export function LandingPage() {
       </p>
 
       {/* Form Card */}
-      <div className="bg-white rounded-2xl p-8 shadow-xl w-full max-w-xl mx-auto">
+      <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-xl w-full max-w-xl mx-auto">
         
         {/* Location */}
         <label className="block text-left font-medium mb-2 text-gray-700">
@@ -29,19 +39,24 @@ export function LandingPage() {
           value={destination}
           onChange={setDestination}
           placeholder="e.g., Chicago, IL"
-          className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ecoGreen focus:outline-none"
+          className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-ecoGreen focus:outline-none"
         />
 
         {/* Volume */}
         <label className="block text-left font-medium mb-2 text-gray-700">
           How much do you need?
         </label>
-        <select className="w-full mb-6 px-3 py-3 rounded-lg border border-gray-300 focus:ring-3 focus:ring-ecoGreen focus:outline-none">
+        <select 
+          value={volume}
+          onChange={(e) => setVolume(e.target.value)}
+          className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-ecoGreen focus:outline-none appearance-none"
+          style={{ height: '48px' }}
+        >
           <option value="">Select volume</option>
-          <option>1–50 tons</option>  
-          <option>50–250 tons</option>
-          <option>250–1000 tons</option>
-          <option>1000+ tons</option>
+          <option value="1-50">1–500 tons</option>  
+          <option value="50-250">500–1000 tons</option>
+          <option value="250-1000">1500–2000 tons</option>
+          <option value="1000+">3000+ tons</option>
         </select>
 
 
@@ -52,12 +67,13 @@ export function LandingPage() {
 
         <div className="flex space-x-3 justify-center mb-8">
 
-          <button
+        <button
+            type="button"
             onClick={() => setPriority("cost")}
             className={`px-5 py-2 rounded-full border transition
               ${
                 priority === "cost"
-                  ? "bg-[#0D1A2D] text-white border-transparent"
+                  ? "bg-buttonBlue text-white border-transparent"
                   : "bg-white text-gray-700 border-gray-300"
               }`}
           >
@@ -65,11 +81,12 @@ export function LandingPage() {
           </button>
 
           <button
+            type="button"
             onClick={() => setPriority("sustainability")}
             className={`px-5 py-2 rounded-full border transition
               ${
                 priority === "sustainability"
-                  ? "bg-[#0D1A2D] text-white border-transparent"
+                  ? "bg-buttonBlue text-white border-transparent"
                   : "bg-white text-gray-700 border-gray-300"
               }`}
           >
@@ -77,11 +94,12 @@ export function LandingPage() {
           </button>
 
           <button
+            type="button"
             onClick={() => setPriority("reliability")}
             className={`px-5 py-2 rounded-full border transition
               ${
                 priority === "reliability"
-                  ? "bg-[#0D1A2D] text-white border-transparent"
+                  ? "bg-buttonBlue text-white border-transparent"
                   : "bg-white text-gray-700 border-gray-300"
               }`}
           >
@@ -90,10 +108,11 @@ export function LandingPage() {
         </div>
 
         {/* CTA Button */}
-        <button className="w-full bg-[#67C28A] text-white font-semibold py-3 rounded-lg hover:bg-[#5AB37A] transition">
+        <button type="submit" 
+          className="w-full bg-submitGreen text-white font-semibold py-3 rounded-lg hover:bg-hoverGreen transition">
           Find My Best Mill
         </button>
-      </div>
+      </form>
     </div>
   );
 }
