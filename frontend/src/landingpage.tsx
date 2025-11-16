@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
+import { CitySelect } from './components/CitySelect'
+import type { CityResult } from './api/geodb'
 
 
 export function LandingPage() {
   const [priority, setPriority] = useState("cost");
+  const [destination, setDestination] = useState<CityResult | null>(null);
 
   return (
     <div className="w-full text-center">
@@ -20,10 +23,11 @@ export function LandingPage() {
         
         {/* Location */}
         <label className="block text-left font-medium mb-2 text-gray-700">
-          Where do you need steel delivered?
+          Which city are you delivering to?
         </label>
-        <input
-          type="text"
+        <CitySelect
+          value={destination}
+          onChange={setDestination}
           placeholder="e.g., Chicago, IL"
           className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ecoGreen focus:outline-none"
         />
@@ -32,13 +36,14 @@ export function LandingPage() {
         <label className="block text-left font-medium mb-2 text-gray-700">
           How much do you need?
         </label>
-        <select className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ecoGreen focus:outline-none">
+        <select className="w-full mb-6 px-3 py-3 rounded-lg border border-gray-300 focus:ring-3 focus:ring-ecoGreen focus:outline-none">
           <option value="">Select volume</option>
-          <option>1–50 tons</option>
-          <option>50–200 tons</option>
-          <option>200–500 tons</option>
-          <option>500+ tons</option>
+          <option>1–50 tons</option>  
+          <option>50–250 tons</option>
+          <option>250–1000 tons</option>
+          <option>1000+ tons</option>
         </select>
+
 
         {/* Priority */}
         <label className="block text-left font-medium mb-3 text-gray-700">
