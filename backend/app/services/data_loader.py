@@ -4,7 +4,7 @@ import json
 
 DATA_PATH = "app/data"
 
-SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X"]
+SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X", "NUE"]
 
 supplier_data = {}
 

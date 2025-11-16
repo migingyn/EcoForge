@@ -7,7 +7,7 @@ from typing import Dict
 import httpx
 import os
 
-from app.services.data_loader import load_supplier_data, load_supplier_metadata, supplier_data
+from app.services.data_loader import load_supplier_data, load_supplier_metadata, supplier_data, supplier_metadata
 from app.services.scoring import calculate_cost_scores, calculate_risk_scores, calculate_co2_scores, calculate_logistics_score, calculate_final_scores
 
 
@@ -84,6 +84,10 @@ def optimize(req: OptimizeRequest):
     return {"results": results}
 
 USER_AGENT_EMAIL = os.getenv("USER_AGENT_EMAIL")
+
+@app.get("/metadata")
+def get_metadata(company: str):
+    return supplier_metadata[company]
 
 @app.get("/geocode")
 async def geocode_location(q: str):

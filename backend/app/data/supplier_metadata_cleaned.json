@@ -1,8 +1,8 @@
 {
   "CLF": {
-    "company": "Cleveland-Cliffs – Indiana Harbor Works",
-    "lat": 41.669553,
-    "lon": -87.438429,
+    "company": "ClevelandCliffs – Indiana Harbor Works",
+    "lat": 41.663183,
+    "lon": -87.4306397,
     "co2_per_ton": 1.54,
     "logistics_mode": "Rail"
   },
@@ -14,31 +14,38 @@
     "logistics_mode": "Rail"
   },
   "STLD": {
-    "company": "Steel Dynamics – Butler Works",
-    "lat": 41.301,
-    "lon": -85.352,
-    "co2_per_ton": 0.6,
+    "company": "Steel Dynamics – Butler Facility",
+    "lat": 41.37064,
+    "lon": -84.917454,
+    "co2_per_ton": 0.391,
     "logistics_mode": "Truck"
   },
   "CMC": {
-    "company": "Commercial Metals – Texas City Mill",
-    "lat": 29.3869,
-    "lon": -94.9147,
-    "co2_per_ton": 0.5,
+    "company": "Commercial Metals – Seguin",
+    "lat": 29.577459,
+    "lon": -98.032017,
+    "co2_per_ton": 0.42,
     "logistics_mode": "Barge"
   },
   "MT": {
-    "company": "ArcelorMittal – Dofasco (Hamilton)",
-    "lat": 43.251,
-    "lon": -79.87,
-    "co2_per_ton": 0.5,
+    "company": "ArcelorMittal – AM/NS Calvert",
+    "lat": 31.1360772,
+    "lon": -87.9988844,
+    "co2_per_ton": 1.75,
     "logistics_mode": "Rail"
   },
   "FRD": {
-    "company": "Friedman Industries – Longview",
-    "lat": 32.5007,
-    "lon": -94.7405,
-    "co2_per_ton": 0.2,
+    "company": "Friedman Industries – East Chicago",
+    "lat": 41.6381295,
+    "lon": -87.4636669,
+    "co2_per_ton": 0.00495,
     "logistics_mode": "Truck"
+  },
+  "NUE": {
+    "company": "Nucor Corp – Hertford Plant",
+    "lat": 36.353006,
+    "lon": -76.811471,
+    "co2_per_ton": 0.78,
+    "logistics_mode": "Rail"
   }
 }

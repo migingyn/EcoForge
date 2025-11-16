@@ -3,7 +3,7 @@ from typing import List, Dict
 
 from app.services.data_loader import load_supplier_data, load_supplier_metadata
 
-SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X"]
+SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X", "NUE"]
 EMISSIONS = {
     "truck": 73.92, # Unit of Measurement: 73.92g CO₂e/tonne-km 
     "rail/train": 11.94, # Unit of Measurement: 11.94g CO₂e/tonne-km
