@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import geocode from "./util/geocode";
 import optimizeRequest from "./util/optimize";
 import { CitySelect } from "./components/CitySelect";
 import type { CityResult } from "./api/geodb";

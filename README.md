@@ -8,6 +8,11 @@ Setting up Python backend:
 5. `pip install -r requirements.txt`
 6. To run: `uvicorn app.main:app --reload`
 
+Installing .env's so api's work
+1. `cp .env.example .env`
+2. `npm install`
+3. `npm run dev`
+
 # PHASE 0 — Setup (≈ 30 min)
 Goal: Establish a working development environment.
 - Initialize GitHub repo
