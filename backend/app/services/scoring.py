@@ -1,7 +1,7 @@
 from math import radians, sin, cos, asin, sqrt
 from typing import List, Dict
 
-from app.services.data_loader import load_supplier_data, load_supplier_metadata
+from app.services.data_loader import load_supplier_data, load_supplier_metadata, load_supplier_metadata_complete
 
 SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X", "NUE"]
 EMISSIONS = {
@@ -32,7 +32,7 @@ def inverse_normalizer(values: List[float]) -> List[float]:
     
 # Calculates score based on cost
 def calculate_cost_scores() -> Dict[str, float]:
-    rank_order = ["FRD", "STLD", "CMC", "MT", "X", "CLF"]
+    rank_order = ["FRD", "STLD", "CMC", "MT", "X", "CLF", "NUE"]
 
     # Convert rank → normalized score (1 = best, 0 = worst)
     cost_scores = {
@@ -81,6 +81,40 @@ def haversine(lat1: float, lon1: float, lat2:  float, lon2: float) -> float:
 
     return R * c
 
+def get_representative_plants(destination_lat: float, destination_lon: float):
+    full_metadata = load_supplier_metadata_complete()
+    representatives = {}
+
+    for company in SUPPLIERS:
+        company_meta = full_metadata[company]
+        plants = company_meta["Plants"]
+
+        best_name = None
+        best_lat = None
+        best_lon = None
+        best_distance = float("inf")
+
+        for plant_name, plant in plants.items():
+            plat = plant["Latitude"]
+            plon = plant["Longitude"]
+
+            d = haversine(destination_lat, destination_lon, plat, plon)
+
+            if d < best_distance:
+                best_distance = d
+                best_name = plant_name
+                best_lat = plat
+                best_lon = plon
+
+        representatives[company] = {
+            "plant_name": best_name,
+            "lat": best_lat,
+            "lon": best_lon,
+            "distance_km": best_distance,
+        }
+
+    return representatives
+
 def calculate_logistics_score(destination_lat, destination_lon, tonnage: float):
     supplier_metadata = load_supplier_metadata()
 
@@ -90,15 +124,17 @@ def calculate_logistics_score(destination_lat, destination_lon, tonnage: float):
         "Barge": "ship",
     }
 
+    representatives = get_representative_plants(destination_lat, destination_lon)
+
     emissions = []
 
     for company in SUPPLIERS:
-        origin_lat = supplier_metadata[company]["lat"]
-        origin_lon = supplier_metadata[company]["lon"]
-        distance = haversine(destination_lat, destination_lon, origin_lat, origin_lon)
+        rep = representatives[company]
+        distance = rep["distance_km"]
 
         logistics_mode = supplier_metadata[company]["logistics_mode"]
         emission_mode = MODE_MAP[logistics_mode]
+
         emission = distance * tonnage * EMISSIONS[emission_mode]
         emissions.append(emission)
     
@@ -123,6 +159,9 @@ def calculate_final_scores(destination_lat, destination_lon, tonnage, weights):
     risk_scores = calculate_risk_scores()
     co2_scores = calculate_co2_scores()
     logistics_scores = calculate_logistics_score(destination_lat, destination_lon, tonnage)
+
+    representatives = get_representative_plants(destination_lat, destination_lon)
+
     results = []
 
     for company in SUPPLIERS:
@@ -147,7 +186,8 @@ def calculate_final_scores(destination_lat, destination_lon, tonnage, weights):
                 "co2": co2,
                 "logistics": logistics,
             },
-            "weights": weights
+            "weights": weights,
+            "representative_plant": representatives[company],  # 👈 NEW
         })
 
     results.sort(key=lambda r: r["final_score"], reverse=True)
