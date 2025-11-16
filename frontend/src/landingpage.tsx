@@ -1,37 +1,20 @@
 import React, { useState } from "react";
-import geocode from "./util/geocode";
-import optimizeRequest from "./util/optimize";
+import { CitySelect } from "./components/CitySelect";
+import type { CityResult } from "./api/geodb";
 
-export function LandingPage() {
+export function LandingPage({ onFindMill }: { onFindMill: (city: string, 
+    volume: string, option: string) => void }) {
   const [priority, setPriority] = useState("cost");
-  const [location, setLocation] = useState("");
   const [volume, setVolume] = useState("");
+  const [destination, setDestination] = useState<CityResult | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    try {
-      const { lat, lon } = await geocode(location);
-
-      let weights = {
-        cost: priority === "cost" ? 9 : 1,
-        co2: priority === "sustainability" ? 9 : 1,
-        risk: priority === "reliability" ? 9 : 1,
-        logistics:
-          priority === "sustainability"
-            ? 9
-            : priority === "reliability"
-            ? 4
-            : 1,
-      };
-
-      const response = await optimizeRequest(lat, lon, weights);
-
-      console.log("Optimized response: ", response);
-    } catch (err) {
-      console.error(err);
+    if (destination && volume) {
+      onFindMill(destination.city, volume, priority);
     }
   };
+
 
   return (
     <div className="w-full text-center">
@@ -46,10 +29,8 @@ export function LandingPage() {
       </p>
 
       {/* Form Card */}
-      <form
-        className="bg-white rounded-2xl p-8 shadow-xl w-full max-w-xl mx-auto"
-        onSubmit={handleSubmit}
-      >
+      <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-xl w-full max-w-xl mx-auto">
+        
         {/* Location */}
         <label className="block text-left font-medium mb-2 text-gray-700">
           Which city are you delivering to?
@@ -60,25 +41,25 @@ export function LandingPage() {
           placeholder="e.g., Chicago, IL"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
-          className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#67C28A] focus:outline-none"
+          className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-ecoGreen focus:outline-none"
         />
 
         {/* Volume */}
         <label className="block text-left font-medium mb-2 text-gray-700">
           How much do you need?
         </label>
-        <select
+        <select 
           value={volume}
           onChange={(e) => setVolume(e.target.value)}
-          className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#67C28A] focus:outline-none"
+          className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-ecoGreen focus:outline-none appearance-none"
+          style={{ height: '48px' }}
         >
           <option value="">Select volume</option>
-          <option>1–50 tons</option>  
-          <option>50–250 tons</option>
-          <option>250–1000 tons</option>
-          <option>1000+ tons</option>
+          <option value="1-50">1–500 tons</option>  
+          <option value="50-250">500–1000 tons</option>
+          <option value="250-1000">1500–2000 tons</option>
+          <option value="1000+">3000+ tons</option>
         </select>
-
 
         {/* Priority */}
         <label className="block text-left font-medium mb-3 text-gray-700">
@@ -86,13 +67,14 @@ export function LandingPage() {
         </label>
 
         <div className="flex space-x-3 justify-center mb-8">
-          <button
+
+        <button
             type="button"
             onClick={() => setPriority("cost")}
             className={`px-5 py-2 rounded-full border transition
               ${
                 priority === "cost"
-                  ? "bg-[#0D1A2D] text-white border-transparent"
+                  ? "bg-buttonBlue text-white border-transparent"
                   : "bg-white text-gray-700 border-gray-300"
               }`}
           >
@@ -105,7 +87,7 @@ export function LandingPage() {
             className={`px-5 py-2 rounded-full border transition
               ${
                 priority === "sustainability"
-                  ? "bg-[#0D1A2D] text-white border-transparent"
+                  ? "bg-buttonBlue text-white border-transparent"
                   : "bg-white text-gray-700 border-gray-300"
               }`}
           >
@@ -118,7 +100,7 @@ export function LandingPage() {
             className={`px-5 py-2 rounded-full border transition
               ${
                 priority === "reliability"
-                  ? "bg-[#0D1A2D] text-white border-transparent"
+                  ? "bg-buttonBlue text-white border-transparent"
                   : "bg-white text-gray-700 border-gray-300"
               }`}
           >
@@ -127,10 +109,8 @@ export function LandingPage() {
         </div>
 
         {/* CTA Button */}
-        <button
-          type="submit"
-          className="w-full bg-[#67C28A] text-white font-semibold py-3 rounded-lg hover:bg-[#5AB37A] transition"
-        >
+        <button type="submit" 
+          className="w-full bg-submitGreen text-white font-semibold py-3 rounded-lg hover:bg-hoverGreen transition">
           Find My Best Mill
         </button>
       </form>
