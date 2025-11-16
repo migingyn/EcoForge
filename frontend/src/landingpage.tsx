@@ -100,12 +100,12 @@ export function LandingPage() {
           value={volume}
           onChange={(e) => setVolume(e.target.value)}
           className="w-full mb-6 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#67C28A] focus:outline-none"
-        >
+          style={{ height: '48px' }}>
           <option value="">Select volume</option>
-          <option>1–50 tons</option>
-          <option>50–250 tons</option>
-          <option>250–1000 tons</option>
-          <option>1000+ tons</option>
+          <option> &lt; 100 tons</option>
+          <option>100–1000 tons</option>
+          <option>1000–10000 tons</option>
+          <option>10000+ tons</option>
         </select>
 
         {/* Priority */}
