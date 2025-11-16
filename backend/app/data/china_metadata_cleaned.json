@@ -1,0 +1,163 @@
+{
+  "HBISGroup_HBISLaotingIron&SteelCo,Ltd": {
+    "company": "HBIS Group - HBIS Laoting Iron & Steel Co., Ltd. (Tangshan New District, Tangshan, Hebei)",
+    "lat": 39.257823,
+    "lon": 119.033567,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "HBISGroup_HBISWugangSpecialPlateCo,Ltd": {
+    "company": "HBIS Group - HBIS Wugang Special Plate Co., Ltd. (Wugang, Henan)",
+    "lat": 33.295,
+    "lon": 113.52694,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "HBISGroup_Plant2": {
+    "company": "HBIS Group - HBIS Shijiazhuang Iron & Steel Co., Ltd. Special Steel Branch (Jingxing Mining Area, Shijiazhuang, Hebei)",
+    "lat": 38.075008,
+    "lon": 114.033043,
+    "co2_per_ton": 1.2,
+    "logistics_mode": "rail"
+  },
+  "HBISGroup_HebeiZhangxuanHighTechCo,Ltd": {
+    "company": "HBIS Group - Hebei Zhangxuan High Tech Co., Ltd. (Xuanhua District, Zhangjiakou, Hebei)",
+    "lat": 40.607977,
+    "lon": 115.067516,
+    "co2_per_ton": 1.0,
+    "logistics_mode": "rail"
+  },
+  "HBISGroup_HangangLongshanIron&SteelCo,Ltd": {
+    "company": "HBIS Group - Hangang Longshan Iron & Steel Co., Ltd. (Shexian County, Handan, Hebei)",
+    "lat": 36.63,
+    "lon": 114.54,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "BengangSteelPlates_BengangSteelPlatesCo,Ltd": {
+    "company": "Bengang Steel Plates - Bengang Steel Plates Co., Ltd. (Benxi, Liaoning)",
+    "lat": 41.274132,
+    "lon": 123.722099,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "BengangSteelPlates_Plant6": {
+    "company": "Bengang Steel Plates - Benxi Beiying Iron & Steel Group Co., Ltd. (Beitai, Benxi, Liaoning)",
+    "lat": 41.224814,
+    "lon": 123.608374,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "BengangSteelPlates_BenxiIron&SteelGroup": {
+    "company": "Bengang Steel Plates - Benxi Iron & Steel Group (Bengang) Integrated Plant (Pingshan, Benxi, Liaoning)",
+    "lat": 41.276,
+    "lon": 123.72,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "BengangSteelPlates_Plant8": {
+    "company": "Bengang Steel Plates - Benxi Beitai Iron Ore Mine and Pellets (Benxi, Liaoning)",
+    "lat": 41.267,
+    "lon": 123.73,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "AngangSteelCompany_AngangSteelCo,Ltd": {
+    "company": "Angang Steel Company - Angang Steel Co., Ltd. (Anshan, Liaoning)",
+    "lat": 41.148267,
+    "lon": 122.983054,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "AngangSteelCompany_BenxiIron&Steel": {
+    "company": "Angang Steel Company - Benxi Iron & Steel (Angang-Shougang joint venture, Anshan, Liaoning)",
+    "lat": 41.15,
+    "lon": 122.97,
+    "co2_per_ton": 0.6,
+    "logistics_mode": "rail"
+  },
+  "AngangSteelCompany_TangshanIron&SteelGroup": {
+    "company": "Angang Steel Company - Tangshan Iron & Steel Group (Tanggang, Hebei)",
+    "lat": 39.648587,
+    "lon": 118.212487,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "AngangSteelCompany_FushunIronandSteel": {
+    "company": "Angang Steel Company - Fushun Iron and Steel (Anshan Group, Liaoning)",
+    "lat": 41.8739,
+    "lon": 123.8868,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "BeijingShougangGroup_Plant13": {
+    "company": "Beijing Shougang Group - Shougang Jingtang Iron & Steel Co., Ltd. (Caofeidian, Hebei)",
+    "lat": 39.315,
+    "lon": 118.049,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "BeijingShougangGroup_ShougangYangangCo,Ltd": {
+    "company": "Beijing Shougang Group - Shougang Yangang Co., Ltd. (Beishan, Hebei)",
+    "lat": 39.617,
+    "lon": 118.183,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "BeijingShougangGroup_Plant15": {
+    "company": "Beijing Shougang Group - Shougang Yunnan Baohua Iron & Steel Co., Ltd. (Qujing, Yunnan)",
+    "lat": 25.507,
+    "lon": 103.841,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "BaoshanIron&Steel_BaoshanIron&SteelCo,Ltd": {
+    "company": "Baoshan Iron & Steel - Baoshan Iron & Steel Co., Ltd. (Shanghai)",
+    "lat": 31.337,
+    "lon": 121.546,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "sea"
+  },
+  "BaoshanIron&Steel_BaoshanIron&Steel": {
+    "company": "Baoshan Iron & Steel - Baoshan Iron & Steel (Chongqing) Co., Ltd.",
+    "lat": 29.727,
+    "lon": 106.556,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "NanjingIron&Steel_NanjingIron&SteelCo,Ltd": {
+    "company": "Nanjing Iron & Steel - Nanjing Iron & Steel Co., Ltd. (Nanjing, Jiangsu)",
+    "lat": 32.042,
+    "lon": 118.834,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "road"
+  },
+  "NanjingIron&Steel_NISCOJinanSpecialSteelCo,Ltd": {
+    "company": "Nanjing Iron & Steel - NISCO Jinan Special Steel Co., Ltd. (Jinan, Shandong)",
+    "lat": 36.713,
+    "lon": 116.998,
+    "co2_per_ton": 0.6,
+    "logistics_mode": "road"
+  },
+  "NanjingIron&Steel_NISCOChongqingSpecialSteelCo,Ltd": {
+    "company": "Nanjing Iron & Steel - NISCO Chongqing Special Steel Co., Ltd. (Chongqing)",
+    "lat": 29.726,
+    "lon": 106.565,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  },
+  "NanjingIron&Steel_NISCONorthSpecialSteelCo,Ltd": {
+    "company": "Nanjing Iron & Steel - NISCO North Special Steel Co., Ltd. (Yekou, Liaoning)",
+    "lat": 42.013,
+    "lon": 121.631,
+    "co2_per_ton": 0.6,
+    "logistics_mode": "rail"
+  },
+  "MaanshanIron&Steel_MaanshanIron&SteelCo,Ltd": {
+    "company": "Maanshan Iron & Steel - Maanshan Iron & Steel Co., Ltd. (Huaibei, Anhui)",
+    "lat": 33.95,
+    "lon": 116.78,
+    "co2_per_ton": 2.0,
+    "logistics_mode": "rail"
+  }
+}
