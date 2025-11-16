@@ -4,7 +4,7 @@ import json
 
 DATA_PATH = "app/data"
 
-SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X"]
+SUPPLIERS = ["CLF", "CMC", "FRD", "MT", "STLD", "X", "AGS", "BAO", "BGSP", "BJS", "HBIS", "MAAN" ,"NANJ"]
 
 supplier_data = {}
 
@@ -32,11 +32,23 @@ supplier_metadata = None
 def load_supplier_metadata():
     global supplier_metadata
 
-    filepath = os.path.join(DATA_PATH, "supplier_metadata_cleaned.json")
     if supplier_metadata is None:
+        us_filepath = os.path.join(DATA_PATH, "supplier_metadata_cleaned.json")
+        china_filepath = os.path.join(DATA_PATH, "china_metadata_cleaned.json")
+        
+        combined_metadata = {}
 
-        with open(filepath, "r") as f:
-            supplier_metadata = json.load(f)
+        if os.path.exists(us_filepath):
+            with open(us_filepath, "r") as f:
+                us_data = json.load(f)
+            combined_metadata.update(us_data)
+        
+        if os.path.exists(china_filepath):
+            with open(china_filepath, "r") as f:
+                china_data = json.load(f)
+            combined_metadata.update(china_data)
+        
+        supplier_metadata = combined_metadata
     
     return supplier_metadata
         
