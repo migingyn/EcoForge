@@ -12,8 +12,14 @@ export function LandingPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (!destination) {
+      alert("Please select a city.");
+      return;
+    }
+
     try {
-      const { lat, lon } = await geocode(location);
+      const lat = destination.latitude;
+      const lon = destination.longitude;
 
       let weights = {
         cost: priority === "cost" ? 9 : 1,
