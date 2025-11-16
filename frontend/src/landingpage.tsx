@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import geocode from "./util/geocode";
+import optimizeRequest from "./util/optimize";
 
 export function LandingPage() {
   const [priority, setPriority] = useState("cost");
@@ -8,8 +9,28 @@ export function LandingPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const { lat, lon } = await geocode(location);
-    console.log(lat, lon);
+
+    try {
+      const { lat, lon } = await geocode(location);
+
+      let weights = {
+        cost: priority === "cost" ? 9 : 1,
+        co2: priority === "sustainability" ? 9 : 1,
+        risk: priority === "reliability" ? 9 : 1,
+        logistics:
+          priority === "sustainability"
+            ? 9
+            : priority === "reliability"
+            ? 4
+            : 1,
+      };
+
+      const response = await optimizeRequest(lat, lon, weights);
+
+      console.log("Optimized response: ", response);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -64,6 +85,7 @@ export function LandingPage() {
 
         <div className="flex space-x-3 justify-center mb-8">
           <button
+            type="button"
             onClick={() => setPriority("cost")}
             className={`px-5 py-2 rounded-full border transition
               ${
@@ -76,6 +98,7 @@ export function LandingPage() {
           </button>
 
           <button
+            type="button"
             onClick={() => setPriority("sustainability")}
             className={`px-5 py-2 rounded-full border transition
               ${
@@ -88,6 +111,7 @@ export function LandingPage() {
           </button>
 
           <button
+            type="button"
             onClick={() => setPriority("reliability")}
             className={`px-5 py-2 rounded-full border transition
               ${
