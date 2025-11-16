@@ -3,14 +3,17 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from pydantic import BaseModel
 from typing import Dict
+from dotenv import load_dotenv
 
 import httpx
 import os
 
 from app.services.data_loader import load_supplier_data, load_supplier_metadata, load_supplier_metadata_complete, supplier_data
 from app.services.scoring import calculate_cost_scores, calculate_risk_scores, calculate_co2_scores, calculate_logistics_score, calculate_final_scores
+from app.routes import ai
 
 
+load_dotenv()
 # Create app
 app = FastAPI(title="Steel Tradeoff API")
 
@@ -36,6 +39,8 @@ async def lifespan(app: FastAPI):
     print("Shutting down...")
 
 app.router.lifespan_context = lifespan
+
+app.include_router(ai.router, prefix="/api")
 
 class OptimizeRequest(BaseModel):
     destination_lat: float

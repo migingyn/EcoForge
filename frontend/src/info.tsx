@@ -300,7 +300,11 @@ export default function Info() {
 
         {/* AI summary of the mill */}
         <div className="grid grid-cols-1 gap-6 mt-6">
-          <AISummary millName={metadata.Name ?? mill.company} />
+          <AISummary
+            millName={metadata.Name ?? mill.company}
+            scores={mill.scores} // from your optimize response
+            metadata={metadata} // from /metadata backend
+          />
         </div>
 
         {/* Plant locations (you could highlight representative_plant here) */}
