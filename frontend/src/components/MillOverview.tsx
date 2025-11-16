@@ -25,9 +25,7 @@ export function MillOverview({
             Recommended Steel Mill
           </Badge>
           <h1 className="mb-2">{name}</h1>
-          <p className="text-slate-300">
-            Established {yearCommissioned} • Integrated Steel Producer
-          </p>
+          <p className="text-slate-300">Established {yearCommissioned}</p>
         </div>
         <Factory className="size-12 text-slate-400" />
       </div>

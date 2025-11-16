@@ -29,12 +29,13 @@ export function SustainabilityMetrics({
 }: SustainabilityMetricsProps) {
   // Typical steel industry range: 1.2-2.3 t CO2/t steel
   // Calculate percentage based on best (1.2) and worst (2.3)
-  const co2Percentage = ((carbonIntensity.CO2_per_ton - 1.2) / (2.3 - 1.2)) * 100;
+  const co2Percentage =
+    ((carbonIntensity.CO2_per_ton - 1.2) / (2.3 - 1.2)) * 100;
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+        <CardTitle className="flex items-center gap-2 text-black">
           <Leaf className="size-5 text-green-600" />
           Sustainability & Environmental
         </CardTitle>
@@ -43,7 +44,9 @@ export function SustainabilityMetrics({
         <div>
           <div className="flex items-center justify-between mb-2">
             <span className="text-slate-600">CO₂ Intensity</span>
-            <span>{carbonIntensity.CO2_per_ton} t CO₂/t steel</span>
+            <span className="text-black">
+              {carbonIntensity.CO2_per_ton} t CO₂/t steel
+            </span>
           </div>
           <Progress value={co2Percentage} className="h-2" />
           <div className="flex justify-between mt-1">
@@ -56,7 +59,7 @@ export function SustainabilityMetrics({
           <div className="flex items-start gap-2">
             <Zap className="size-4 text-yellow-500 mt-1" />
             <div>
-              <div className="text-slate-600">Energy Mix</div>
+              <div className="text-slate-600 text-left">Energy Mix</div>
               <p className="text-slate-900">{energyMix.Electricity}</p>
             </div>
           </div>
@@ -64,16 +67,22 @@ export function SustainabilityMetrics({
           <div className="flex items-start gap-2">
             <Target className="size-4 text-blue-500 mt-1" />
             <div>
-              <div className="text-slate-600">Emissions Targets</div>
-              <p className="text-slate-900">{energyMix.EmissionsTargets}</p>
+              <div className="text-slate-600 text-left">Emissions Targets</div>
+              <p className="text-slate-900 text-left">
+                {energyMix.EmissionsTargets}
+              </p>
             </div>
           </div>
 
           <div className="flex items-start gap-2">
             <Leaf className="size-4 text-green-500 mt-1" />
             <div>
-              <div className="text-slate-600">Green Steel Investments</div>
-              <p className="text-slate-900">{energyMix.GreenSteelInvestments}</p>
+              <div className="text-slate-600 text-left">
+                Green Steel Investments
+              </div>
+              <p className="text-slate-900 text-left">
+                {energyMix.GreenSteelInvestments}
+              </p>
             </div>
           </div>
         </div>
@@ -81,9 +90,12 @@ export function SustainabilityMetrics({
         <div className="border-t pt-4">
           <div className="flex items-start gap-2">
             <AlertCircle className="size-4 text-amber-500 mt-1" />
-            <div>
+            <div className="flex flex-col">
               <div className="text-slate-600 mb-1">Compliance Status</div>
-              <Badge variant="outline" className="bg-amber-50">
+              <Badge
+                variant="outline"
+                className="bg-amber-50 mr-auto text-left text-black mr-auto"
+              >
                 {energyMix.EPA_Violations}
               </Badge>
             </div>
@@ -91,8 +103,8 @@ export function SustainabilityMetrics({
         </div>
 
         <div className="border-t pt-4">
-          <div className="text-slate-600 mb-2">Carbon Capture</div>
-          <p className="text-slate-900">{energyMix.CarbonCapture}</p>
+          <div className="text-slate-600 mb-2 text-left">Carbon Capture</div>
+          <p className="text-slate-900 text-left">{energyMix.CarbonCapture}</p>
         </div>
       </CardContent>
     </Card>

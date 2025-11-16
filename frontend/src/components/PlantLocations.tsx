@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-interface Plant {
+export interface Plant {
   Location: string;
   Latitude: number;
   Longitude: number;
@@ -30,11 +30,10 @@ interface PlantLocationsProps {
 export function PlantLocations({ plants }: PlantLocationsProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Get the first plant as the closest one (in a real app, this would be calculated based on user location)
   const plantEntries = Object.entries(plants);
   const [closestPlantName, closestPlant] = plantEntries[0];
-  const visiblePlants = plantEntries.slice(1, 3); // Show 2 other plants
-  const hiddenPlants = plantEntries.slice(3); // Rest are collapsible
+  const visiblePlants = plantEntries.slice(1, 3);
+  const hiddenPlants = plantEntries.slice(3);
 
   return (
     <Card>
@@ -53,11 +52,14 @@ export function PlantLocations({ plants }: PlantLocationsProps) {
           </div>
 
           <div className="mb-3">
-            <h3 className="mb-1">{closestPlantName}</h3>
-            <p className="text-slate-600">{closestPlant.Location}</p>
+            <h3 className="mb-1 text-black text-left">{closestPlantName}</h3>
+            <p className="text-slate-600 text-left">{closestPlant.Location}</p>
             <div className="flex items-center gap-2 mt-2">
-              <Badge variant="outline" className="flex items-center gap-1">
-                <Calendar className="size-3" />
+              <Badge
+                variant="outline"
+                className="flex items-center gap-1 text-black"
+              >
+                <Calendar className="size-3 text-black" />
                 {closestPlant["Year commissioned"]}
               </Badge>
               <span className="text-slate-500">
@@ -96,9 +98,9 @@ export function PlantLocations({ plants }: PlantLocationsProps) {
             {visiblePlants.map(([plantName, plantData]) => (
               <div
                 key={plantName}
-                className="border rounded-lg p-4 hover:border-slate-400 transition-colors"
+                className="border rounded-lg p-4 hover:border-slate-400 transition-colors text-black"
               >
-                <div className="flex items-start justify-between mb-2">
+                <div className="flex items-start justify-between mb-2 text-left">
                   <div>
                     <h3 className="mb-1">{plantName}</h3>
                     <p className="text-slate-600">{plantData.Location}</p>
@@ -116,7 +118,7 @@ export function PlantLocations({ plants }: PlantLocationsProps) {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="ml-auto"
+                    className="ml-auto bg-slate-50"
                     onClick={() =>
                       window.open(plantData["Google Maps"], "_blank")
                     }
@@ -131,20 +133,18 @@ export function PlantLocations({ plants }: PlantLocationsProps) {
             {/* Collapsible Section for Additional Plants */}
             {hiddenPlants.length > 0 && (
               <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-                <CollapsibleTrigger asChild>
-                  <Button variant="outline" className="w-full">
-                    {isOpen
-                      ? "Show Less"
-                      : `Show ${hiddenPlants.length} More Location${
-                          hiddenPlants.length > 1 ? "s" : ""
-                        }`}
-                    <ChevronDown
-                      className={`size-4 ml-2 transition-transform ${
-                        isOpen ? "rotate-180" : ""
+                {/* Top button when collapsed */}
+                {!isOpen && (
+                  <CollapsibleTrigger asChild>
+                    <Button variant="outline" className="w-full">
+                      {`Show ${hiddenPlants.length} More Location${
+                        hiddenPlants.length > 1 ? "s" : ""
                       }`}
-                    />
-                  </Button>
-                </CollapsibleTrigger>
+                      <ChevronDown className="size-4 ml-2" />
+                    </Button>
+                  </CollapsibleTrigger>
+                )}
+
                 <CollapsibleContent className="space-y-3 mt-3">
                   {hiddenPlants.map(([plantName, plantData]) => (
                     <div
@@ -153,14 +153,18 @@ export function PlantLocations({ plants }: PlantLocationsProps) {
                     >
                       <div className="flex items-start justify-between mb-2">
                         <div>
-                          <h3 className="mb-1">{plantName}</h3>
-                          <p className="text-slate-600">{plantData.Location}</p>
+                          <h3 className="mb-1 text-black text-left">
+                            {plantName}
+                          </h3>
+                          <p className="text-slate-600 text-left">
+                            {plantData.Location}
+                          </p>
                         </div>
                         <Badge
                           variant="outline"
-                          className="flex items-center gap-1"
+                          className="flex items-center gap-1 text-black"
                         >
-                          <Calendar className="size-3" />
+                          <Calendar className="size-3 text-black" />
                           {plantData["Year commissioned"]}
                         </Badge>
                       </div>
@@ -172,7 +176,7 @@ export function PlantLocations({ plants }: PlantLocationsProps) {
                         <Button
                           variant="ghost"
                           size="sm"
-                          className="ml-auto"
+                          className="ml-auto bg-slate-50 text-black"
                           onClick={() =>
                             window.open(plantData["Google Maps"], "_blank")
                           }
@@ -184,6 +188,16 @@ export function PlantLocations({ plants }: PlantLocationsProps) {
                     </div>
                   ))}
                 </CollapsibleContent>
+
+                {/* Bottom button when expanded */}
+                {isOpen && (
+                  <CollapsibleTrigger asChild>
+                    <Button variant="outline" className="w-full mt-3">
+                      Show Less
+                      <ChevronDown className="size-4 ml-2 rotate-180" />
+                    </Button>
+                  </CollapsibleTrigger>
+                )}
               </Collapsible>
             )}
           </div>

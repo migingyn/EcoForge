@@ -1,3 +1,5 @@
+import { useLocation } from "react-router-dom";
+
 import { MillOverview } from "./components/MillOverview";
 import { AISummary } from "./components/AISummary";
 import { PlantLocations } from "./components/PlantLocations";
@@ -6,141 +8,325 @@ import { SustainabilityMetrics } from "./components/SustainabilityMetrics";
 import { LogisticsInfo } from "./components/LogisticsInfo";
 import { RiskFactors } from "./components/RiskFactors";
 
-const steelMillData = {
-  name: "Cleveland Cliffs",
-  Plants: {
-    "Indiana Harbor Works": {
-      Location: "East Chicago, Indiana, USA",
-      Latitude: 41.669553,
-      Longitude: -87.438429,
-      "Google Maps": "https://maps.google.com/?q=41.669553,-87.438429",
-      "Year commissioned": 1901,
-    },
-    "Cleveland Works": {
-      Location: "Cleveland, Ohio, USA",
-      Latitude: 41.464041,
-      Longitude: -81.676499,
-      "Google Maps": "https://maps.google.com/?q=41.464041,-81.676499",
-      "Year commissioned": 1913,
-    },
-    "Burns Harbor Works": {
-      Location: "Portage (Burns Harbor), Indiana, USA",
-      Latitude: 41.631221,
-      Longitude: -87.143846,
-      "Google Maps": "https://maps.google.com/?q=41.631221,-87.143846",
-      "Year commissioned": 1964,
-    },
-    "Cleveland-Cliffs Dearborn Works": {
-      Location: "Dearborn, Michigan, USA",
-      Latitude: 42.3049669,
-      Longitude: -83.1578118,
-      "Google Maps": "https://maps.google.com/?q=42.3049669,-83.1578118",
-      "Year commissioned": 1920,
-    },
-    "Middletown Works": {
-      Location: "Middleton, Ohio, USA",
-      Latitude: 39.4935902,
-      Longitude: -84.3937199,
-      "Google Maps": "https://maps.google.com/?q=39.4935902,-84.3937199",
-      "Year commissioned": 1901,
-    },
-  },
-  YearCommissioned: "1847",
-  SteelmakingProcess: {
-    PrimaryRoute: "Blast Furnace – Basic Oxygen Furnace (EAF idled)",
-    CokeOvens: "Yes (integrated BF plant)",
-    SinterPlants: "Yes (integrated BF plant)",
-    Pelletizers: "No (uses own pellet plants off-site)",
-    ScrapShare: "EAF feedstock ~75% scrap",
-    DRIShare: "0%",
-    HotMetalShare: "100%",
-    EAF_MVA: null,
-    BF_Capacity: "4200 kt/year",
-    FurnaceSize:
-      "BF7: 4,163 m³ (capacity ~4.2 Mt/yr); BOF: 250 t (x2), 185 t (x2)",
-    RollingMill:
-      '80" hot-strip mill, pickling, 5-stand tandem cold mill, temper mill, hot-dip galvanizing line',
-  },
-  CarbonIntensity: {
-    CO2_per_ton: 1.54,
-    Scope1: "N/A",
-    Scope2: "N/A",
-    Scope3: "N/A",
-  },
-  ProductionCapacity: {
-    AnnualCrudeSteel_Mt: 6.8,
-    RollingCapacity: "Hot strip and cold rolling (~ multi-million t/yr)",
-    UtilizationRate: "N/A",
-    FeedstockSources:
-      "Iron ore pellets (own mines), HBI (Toledo), metallurgical coal (coke ovens), scrap (FPT)",
-  },
-  Logistics: {
-    OutboundModes: ["Rail", "Barge"],
-    OnsiteRail: "Yes",
-    Highways: "Near I-90 (Indiana Toll Road)",
-    WaterAccess: "Lake Michigan via Indiana Harbor Ship Canal",
-    NearestPort: "Port of Indiana (Burns Harbor)",
-    ShippingRadius: "Midwest/Great Lakes region",
-    LogisticsPartners: ["CSX", "Norfolk Southern", "CN"],
-  },
-  EnergyMix_Sustainability: {
-    Electricity: "Regional grid (PJM/MISO), some renewable PPAs",
-    GreenSteelInvestments: "Hydrogen-ready BF pipeline",
-    CarbonCapture: "No CCS deployed (pilot H2 injection)",
-    EmissionsTargets: "Reduce Scope1+2 intensity 30% by 2035; net-zero by 2050",
-    EPA_Violations:
-      "OSHA safety fines (2020); no major EPA air violations found",
-  },
-  RiskFactors: {
-    Market: "Automotive demand sensitivity, commodity price swings",
-    Operational: "Blast furnace outages, aging equipment",
-    Labor: "Unionized workforce (United Steelworkers)",
-    Geographic: "Harsh winters (Lake transport), water availability",
-  },
-  ModelInputs: {
-    CO2Intensity: 1.54,
-    LogisticsMode: "Rail",
-    RedFlags: "High BF reliance; large CO2 emitter",
-  },
+import type { Plant as PlantUI } from "./components/PlantLocations";
+
+// --- Types -------------------------------------------------------------
+
+type UIRiskFactors = {
+  Market: string;
+  Operational: string;
+  Labor: string;
+  Geographic: string;
 };
 
+type UILogistics = {
+  OutboundModes: string[];
+  OnsiteRail: string;
+  Highways: string;
+  WaterAccess: string;
+  NearestPort: string;
+  ShippingRadius: string;
+  LogisticsPartners: string[];
+};
+
+type UIEnergyMix = {
+  Electricity: string;
+  GreenSteelInvestments: string;
+  CarbonCapture: string;
+  EmissionsTargets: string;
+  EPA_Violations: string;
+};
+
+type UIProductionCapacity = {
+  AnnualCrudeSteel_Mt: number;
+  RollingCapacity: string;
+  UtilizationRate: string;
+  FeedstockSources: string;
+};
+
+type UISteelmakingProcess = {
+  PrimaryRoute: string;
+  CokeOvens: string;
+  SinterPlants: string;
+  Pelletizers: string;
+  ScrapShare: string;
+  DRIShare: string;
+  HotMetalShare: string;
+  EAF_MVA: string;
+  BF_Capacity: string;
+  FurnaceSize: string;
+  RollingMill: string;
+};
+
+type UICarbonIntensity = {
+  CO2_per_ton: number;
+  Scope1: string;
+  Scope2: string;
+  Scope3: string;
+};
+
+type PlantMetadata = {
+  Location: string;
+  Latitude: number | string;
+  Longitude: number | string;
+  "Google Maps": string;
+  "Year commissioned": number | string;
+};
+
+type SteelMillData = {
+  Name: string;
+  Plants: Record<string, PlantMetadata>;
+  YearCommissioned: string | number;
+
+  SteelmakingProcess: {
+    PrimaryRoute: string;
+    CokeOvens?: string;
+    SinterPlants?: string;
+    Pelletizers?: string;
+    ScrapShare?: string;
+    DRIShare?: string;
+    HotMetalShare?: string;
+    EAF_MVA?: number | null;
+    BF_Capacity?: string | null;
+    FurnaceSize?: string | null;
+    RollingMill?: string | null;
+    // allow extra keys without complaining
+    [key: string]: unknown;
+  };
+
+  CarbonIntensity: {
+    CO2_per_ton: number;
+    Scope1?: string | number;
+    Scope2?: string | number;
+    Scope3?: string | number;
+    [key: string]: unknown;
+  };
+
+  ProductionCapacity: {
+    AnnualCrudeSteel_Mt: number;
+    RollingCapacity?: string;
+    UtilizationRate?: string | number;
+    FeedstockSources?: string;
+    [key: string]: unknown;
+  };
+
+  Logistics: {
+    OutboundModes?: string[];
+    OnsiteRail?: string;
+    Highways?: string;
+    WaterAccess?: string;
+    NearestPort?: string;
+    ShippingRadius?: string;
+    LogisticsPartners?: string[];
+    [key: string]: unknown;
+  };
+
+  EnergyMix_Sustainability: {
+    Electricity?: string;
+    GreenSteelInvestments?: string;
+    CarbonCapture?: string;
+    EmissionsTargets?: string;
+    EPA_Violations?: string;
+    [key: string]: unknown;
+  };
+
+  RiskFactors: {
+    Market?: string;
+    Operational?: string;
+    Labor?: string;
+    Geographic?: string;
+    [key: string]: unknown;
+  };
+
+  ModelInputs: {
+    CO2Intensity?: number;
+    LogisticsMode?: string;
+    RedFlags?: string;
+    [key: string]: unknown;
+  };
+};
+
+// This matches the /optimize result you described
+type OptimizeMillResult = {
+  company: string;
+  final_score: number;
+  scores: {
+    cost: number;
+    risk: number;
+    co2: number;
+    logistics: number;
+  };
+  weights: Record<string, number>;
+  representative_plant?: {
+    plant_name: string;
+    lat: number;
+    lon: number;
+    distance_km: number;
+  };
+};
+
+type LocationState = {
+  mill: OptimizeMillResult;
+  metadata: SteelMillData;
+};
+
+// --- Component ---------------------------------------------------------
+
 export default function Info() {
+  const { state } = useLocation() as { state: LocationState | null };
+
+  const mill = state?.mill;
+  const metadata = state?.metadata;
+
+  if (!mill || !metadata) {
+    return (
+      <div className="min-h-screen w-screen bg-slate-50 pt-36">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <h1 className="text-2xl font-semibold text-slate-900">
+            Mill information unavailable
+          </h1>
+          <p className="mt-2 text-slate-600">
+            Please run an optimization from the main page and navigate here from
+            the results view.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Derived values + safe fallbacks
+  const plantCount = metadata.Plants ? Object.keys(metadata.Plants).length : 0;
+
+  const annualCapacity = metadata.ProductionCapacity?.AnnualCrudeSteel_Mt ?? 0;
+
+  const co2Intensity =
+    metadata.CarbonIntensity?.CO2_per_ton ??
+    metadata.ModelInputs?.CO2Intensity ??
+    null;
+
+  const uiCarbonIntensity: UICarbonIntensity = {
+    CO2_per_ton: metadata.CarbonIntensity.CO2_per_ton,
+    Scope1: String(metadata.CarbonIntensity.Scope1 ?? "N/A"),
+    Scope2: String(metadata.CarbonIntensity.Scope2 ?? "N/A"),
+    Scope3: String(metadata.CarbonIntensity.Scope3 ?? "N/A"),
+  };
+
+  const sp = metadata.SteelmakingProcess;
+
+  const uiSteelmakingProcess: UISteelmakingProcess = {
+    PrimaryRoute: String(sp.PrimaryRoute ?? "N/A"),
+    CokeOvens: String(sp.CokeOvens ?? "N/A"),
+    SinterPlants: String(sp.SinterPlants ?? "N/A"),
+    Pelletizers: String(sp.Pelletizers ?? "N/A"),
+    ScrapShare: String(sp.ScrapShare ?? "N/A"),
+    DRIShare: String(sp.DRIShare ?? "N/A"),
+    HotMetalShare: String(sp.HotMetalShare ?? "N/A"),
+    EAF_MVA: sp.EAF_MVA != null ? String(sp.EAF_MVA) : "N/A",
+    BF_Capacity: sp.BF_Capacity ?? "N/A",
+    FurnaceSize: sp.FurnaceSize ?? "N/A",
+    RollingMill: sp.RollingMill ?? "N/A",
+  };
+
+  const uiYearCommissioned = String(metadata.YearCommissioned ?? "N/A");
+
+  const uiPlants: Record<string, PlantUI> = Object.fromEntries(
+    Object.entries(metadata.Plants).map(([name, plant]) => [
+      name,
+      {
+        Location: plant.Location,
+        Latitude: Number(plant.Latitude),
+        Longitude: Number(plant.Longitude),
+        "Google Maps": plant["Google Maps"],
+        "Year commissioned": Number(plant["Year commissioned"]),
+      },
+    ])
+  );
+
+  const pc = metadata.ProductionCapacity ?? {};
+
+  const uiProductionCapacity: UIProductionCapacity = {
+    AnnualCrudeSteel_Mt: pc.AnnualCrudeSteel_Mt ?? 0,
+    RollingCapacity: pc.RollingCapacity ?? "N/A",
+    UtilizationRate:
+      pc.UtilizationRate != null ? String(pc.UtilizationRate) : "N/A",
+    FeedstockSources: pc.FeedstockSources ?? "N/A",
+  };
+
+  const em = metadata.EnergyMix_Sustainability ?? {};
+
+  const uiEnergyMix: UIEnergyMix = {
+    Electricity: em.Electricity ?? "N/A",
+    GreenSteelInvestments: em.GreenSteelInvestments ?? "N/A",
+    CarbonCapture: em.CarbonCapture ?? "N/A",
+    EmissionsTargets: em.EmissionsTargets ?? "N/A",
+    EPA_Violations: em.EPA_Violations ?? "N/A",
+  };
+
+  const lg = metadata.Logistics ?? {};
+
+  const uiLogistics: UILogistics = {
+    OutboundModes: lg.OutboundModes ?? [],
+    OnsiteRail: lg.OnsiteRail ?? "N/A",
+    Highways: lg.Highways ?? "N/A",
+    WaterAccess: lg.WaterAccess ?? "N/A",
+    NearestPort: lg.NearestPort ?? "N/A",
+    ShippingRadius: lg.ShippingRadius ?? "N/A",
+    LogisticsPartners: lg.LogisticsPartners ?? [],
+  };
+
+  const rf = metadata.RiskFactors ?? {};
+
+  const uiRiskFactors: UIRiskFactors = {
+    Market: rf.Market ?? "N/A",
+    Operational: rf.Operational ?? "N/A",
+    Labor: rf.Labor ?? "N/A",
+    Geographic: rf.Geographic ?? "N/A",
+  };
+
+  const uiRedFlags: string =
+    metadata.ModelInputs.RedFlags ?? "No major red flags reported";
+
   return (
     <div className="min-h-screen w-screen bg-slate-50 pt-36">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Top summary card */}
         <MillOverview
-          name={steelMillData.name}
-          yearCommissioned={steelMillData.YearCommissioned}
-          plantCount={Object.keys(steelMillData.Plants).length}
-          annualCapacity={steelMillData.ProductionCapacity.AnnualCrudeSteel_Mt}
-          co2Intensity={steelMillData.CarbonIntensity.CO2_per_ton}
+          name={metadata.Name ?? mill.company}
+          yearCommissioned={uiYearCommissioned}
+          plantCount={plantCount}
+          annualCapacity={annualCapacity}
+          co2Intensity={co2Intensity}
         />
 
+        {/* AI summary of the mill */}
         <div className="grid grid-cols-1 gap-6 mt-6">
-          <AISummary millName={steelMillData.name} />
+          <AISummary millName={metadata.Name ?? mill.company} />
         </div>
 
+        {/* Plant locations (you could highlight representative_plant here) */}
         <div className="grid grid-cols-1 gap-6 mt-6">
-          <PlantLocations plants={steelMillData.Plants} />
+          <PlantLocations
+            plants={uiPlants}
+            // highlightedPlantName={mill.representative_plant?.plant_name}
+          />
         </div>
 
+        {/* Production + sustainability */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
           <ProductionDetails
-            steelmakingProcess={steelMillData.SteelmakingProcess}
-            productionCapacity={steelMillData.ProductionCapacity}
+            steelmakingProcess={uiSteelmakingProcess}
+            productionCapacity={uiProductionCapacity}
           />
           <SustainabilityMetrics
-            carbonIntensity={steelMillData.CarbonIntensity}
-            energyMix={steelMillData.EnergyMix_Sustainability}
+            carbonIntensity={uiCarbonIntensity}
+            energyMix={uiEnergyMix}
           />
         </div>
 
+        {/* Logistics + risk */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-          <LogisticsInfo logistics={steelMillData.Logistics} />
-          <RiskFactors
-            riskFactors={steelMillData.RiskFactors}
-            redFlags={steelMillData.ModelInputs.RedFlags}
-          />
+          <LogisticsInfo logistics={uiLogistics} />
+          <RiskFactors riskFactors={uiRiskFactors} redFlags={uiRedFlags} />
         </div>
       </div>
     </div>

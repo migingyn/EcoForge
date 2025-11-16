@@ -8,6 +8,7 @@ export function LandingPage() {
   const [priority, setPriority] = useState("cost");
   const [volume, setVolume] = useState("");
   const [destination, setDestination] = useState<CityResult | null>(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,6 +36,27 @@ export function LandingPage() {
 
       const response = await optimizeRequest(lat, lon, weights);
       console.log("Optimized response:", response);
+
+      const bestMill = response.results[0];
+
+      try {
+        const res = await fetch(
+          `${import.meta.env.VITE_BACKEND_URL}/metadata?company=${
+            bestMill["company"]
+          }`
+        );
+        const metadata = await res.json();
+        console.log(metadata);
+
+        navigate("/info", {
+          state: {
+            mill: bestMill,
+            metadata: metadata,
+          },
+        });
+      } catch (err) {
+        console.error(err);
+      }
     } catch (err) {
       console.error(err);
     }

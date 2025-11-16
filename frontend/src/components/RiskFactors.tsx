@@ -1,6 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Alert, AlertDescription } from "./ui/alert";
-import { AlertTriangle, TrendingDown, Wrench, Users, MapPin } from "lucide-react";
+import {
+  AlertTriangle,
+  TrendingDown,
+  Wrench,
+  Users,
+  MapPin,
+} from "lucide-react";
 
 interface RiskFactors {
   Market: string;
@@ -25,7 +31,7 @@ export function RiskFactors({ riskFactors, redFlags }: RiskFactorsProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+        <CardTitle className="flex items-center gap-2 text-black">
           <AlertTriangle className="size-5 text-amber-500" />
           Risk Assessment
         </CardTitle>
@@ -33,9 +39,9 @@ export function RiskFactors({ riskFactors, redFlags }: RiskFactorsProps) {
       <CardContent>
         <Alert variant="destructive" className="mb-6">
           <AlertTriangle className="size-4" />
-          <AlertDescription>
-            <span>Red Flags: </span>
-            <span>{redFlags}</span>
+          <AlertDescription className="text-red-600 text-left flex flex-col w-full items-start">
+            <span className="text-red-600 text-left mr-auto">Red Flags: </span>
+            <span className="mr-auto">{redFlags}</span>
           </AlertDescription>
         </Alert>
 
@@ -45,7 +51,7 @@ export function RiskFactors({ riskFactors, redFlags }: RiskFactorsProps) {
             return (
               <div
                 key={category}
-                className="border rounded-lg p-4 hover:border-slate-400 transition-colors"
+                className="border rounded-lg p-4 hover:border-slate-400 transition-colors text-black"
               >
                 <div className="flex items-start gap-3">
                   <div className="p-2 bg-slate-100 rounded-lg">
